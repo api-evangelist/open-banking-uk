@@ -1,0 +1,53 @@
+{
+  "title": "Event Notification API Specification - TPP Endpoints",
+  "version": "4.0.1",
+  "source": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/event-notifications-openapi.yaml",
+  "description": "Illustrative request and response examples for the UK Open Banking Event Notification API (TPP Endpoints) v4.0.1",
+  "examples": [
+    {
+      "operationId": "CreateEventNotification",
+      "path": "/event-notifications",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/jwt",
+      "description": "ASPSP pushes a security event token (SET) to the TPP callback URL as a signed JWT",
+      "example": {
+        "description": "This endpoint receives a Security Event Token (SET) as a signed JWT from the ASPSP. The JWT payload conforms to RFC 8417 and contains a 'toe' (time of event), 'txn' (transaction ID), 'sub' (subject), and event-specific claims.",
+        "jwtPayloadExample": {
+          "iss": "https://api.alphabank.com/",
+          "iat": 1749812400,
+          "jti": "b460a07c-4962-43d1-85ee-9dc10a1e7d29",
+          "aud": "7umx5nTR33811QyQfi",
+          "sub": "https://api.alphabank.com/open-banking/v4.0/aisp/account-access-consents/58923",
+          "txn": "dfc51628-3479-4b81-ad60-210b43d02306",
+          "toe": 1749812400,
+          "events": {
+            "urn:uk:org:openbanking:events:resource-update": {
+              "subject": {
+                "subject_type": "http://openbanking.org.uk/rid_http://openbanking.org.uk/rty",
+                "http://openbanking.org.uk/rid": "58923",
+                "http://openbanking.org.uk/rty": "account-access-consents",
+                "http://openbanking.org.uk/rlk": [
+                  {
+                    "version": "v4.0",
+                    "link": "https://api.alphabank.com/open-banking/v4.0/aisp/account-access-consents/58923"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "operationId": "CreateEventNotification",
+      "path": "/event-notifications",
+      "method": "POST",
+      "statusCode": "202",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "TPP acknowledges receipt of the event notification (no body required)",
+      "example": {}
+    }
+  ]
+}

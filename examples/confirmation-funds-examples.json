@@ -1,0 +1,103 @@
+{
+  "title": "Confirmation of Funds API Specification",
+  "version": "4.0.1",
+  "source": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/confirmation-funds-openapi.yaml",
+  "description": "Illustrative request and response examples for the UK Open Banking Confirmation of Funds API v4.0.1",
+  "examples": [
+    {
+      "operationId": "CreateFundsConfirmationConsents",
+      "path": "/funds-confirmation-consents",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/json",
+      "description": "Create a funds confirmation consent for a specific debtor account",
+      "example": {
+        "Data": {
+          "ExpirationDateTime": "2026-12-31T23:59:59+00:00",
+          "DebtorAccount": {
+            "SchemeName": "UK.OBIE.IBAN",
+            "Identification": "GB76LOYD30949301273801",
+            "Name": "Mrs K Jones",
+            "SecondaryIdentification": "Roll No. 001"
+          }
+        }
+      }
+    },
+    {
+      "operationId": "CreateFundsConfirmationConsents",
+      "path": "/funds-confirmation-consents",
+      "method": "POST",
+      "statusCode": "201",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Successful creation of a funds confirmation consent",
+      "example": {
+        "Data": {
+          "ConsentId": "88379",
+          "CreationDateTime": "2026-06-13T10:00:00+00:00",
+          "Status": "AwaitingAuthorisation",
+          "StatusUpdateDateTime": "2026-06-13T10:00:00+00:00",
+          "ExpirationDateTime": "2026-12-31T23:59:59+00:00",
+          "DebtorAccount": {
+            "SchemeName": "UK.OBIE.IBAN",
+            "Identification": "GB76LOYD30949301273801",
+            "Name": "Mrs K Jones",
+            "SecondaryIdentification": "Roll No. 001"
+          }
+        },
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/cbpii/funds-confirmation-consents/88379"
+        },
+        "Meta": {
+          "TotalPages": 1
+        }
+      }
+    },
+    {
+      "operationId": "CreateFundsConfirmations",
+      "path": "/funds-confirmations",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/json",
+      "description": "Check if sufficient funds are available for a specified amount",
+      "example": {
+        "Data": {
+          "ConsentId": "88379",
+          "Reference": "Purchase01",
+          "InstructedAmount": {
+            "Amount": "20.00",
+            "Currency": "GBP"
+          }
+        }
+      }
+    },
+    {
+      "operationId": "CreateFundsConfirmations",
+      "path": "/funds-confirmations",
+      "method": "POST",
+      "statusCode": "201",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Funds confirmation result — funds are available",
+      "example": {
+        "Data": {
+          "FundsConfirmationId": "fc-001",
+          "ConsentId": "88379",
+          "CreationDateTime": "2026-06-13T10:05:00+00:00",
+          "FundsAvailable": true,
+          "Reference": "Purchase01",
+          "InstructedAmount": {
+            "Amount": "20.00",
+            "Currency": "GBP"
+          }
+        },
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/cbpii/funds-confirmations/fc-001"
+        },
+        "Meta": {
+          "TotalPages": 1
+        }
+      }
+    }
+  ]
+}

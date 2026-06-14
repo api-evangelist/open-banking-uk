@@ -1,0 +1,5298 @@
+{
+  "title": "UK Open Banking Vocabulary",
+  "description": "Terms, operations, and data types from the UK Open Banking API specifications v4.0.1",
+  "version": "4.0.1",
+  "source": "https://github.com/OpenBankingUK/read-write-api-specs",
+  "termCount": 338,
+  "operationCount": 89,
+  "tagCount": 2,
+  "tags": [
+    {
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ]
+    },
+    {
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "api": "Account and Transaction API",
+      "path": "/account-access-consents",
+      "method": "POST",
+      "operationId": "CreateAccountAccessConsents",
+      "summary": "Create an Account Access Consent",
+      "tags": [
+        "Account Access Consents"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/account-access-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "GetAccountAccessConsentsConsentId",
+      "summary": "Get an Account Access Consent",
+      "tags": [
+        "Account Access Consents"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/account-access-consents/{ConsentId}",
+      "method": "DELETE",
+      "operationId": "DeleteAccountAccessConsentsConsentId",
+      "summary": "Delete an Account Access Consent",
+      "tags": [
+        "Account Access Consents"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts",
+      "method": "GET",
+      "operationId": "GetAccounts",
+      "summary": "Get Accounts",
+      "tags": [
+        "Accounts"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}",
+      "method": "GET",
+      "operationId": "GetAccountsAccountId",
+      "summary": "Get an Account by AccountId",
+      "tags": [
+        "Accounts"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/balances",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdBalances",
+      "summary": "Get Balances for an AccountId",
+      "tags": [
+        "Balances"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/beneficiaries",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdBeneficiaries",
+      "summary": "Get Beneficiaries for an AccountId",
+      "tags": [
+        "Beneficiaries"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/direct-debits",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdDirectDebits",
+      "summary": "Get Direct Debits for an AccountId",
+      "tags": [
+        "Direct Debits"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/offers",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdOffers",
+      "summary": "Get Offers for an AccountId",
+      "tags": [
+        "Offers"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/parties",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdParties",
+      "summary": "Get Parties for an AccountId",
+      "tags": [
+        "Parties"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/party",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdParty",
+      "summary": "Get Party for an AccountId",
+      "tags": [
+        "Parties"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/product",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdProduct",
+      "summary": "Get Product for an AccountId",
+      "tags": [
+        "Products"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/scheduled-payments",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdScheduledPayments",
+      "summary": "Get Scheduled Payments for an AccountId",
+      "tags": [
+        "Scheduled Payments"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/standing-orders",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdStandingOrders",
+      "summary": "Get Standing Orders for an AccountId",
+      "tags": [
+        "Standing Orders"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/statements",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdStatements",
+      "summary": "Get Statements for an AccountId",
+      "tags": [
+        "Statements"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/statements/{StatementId}",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdStatementsStatementId",
+      "summary": "Get Statement by StatementId for an AccountId",
+      "tags": [
+        "Statements"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/statements/{StatementId}/file",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdStatementsStatementIdFile",
+      "summary": "Get Statement file by StatementId for an AccountId",
+      "tags": [
+        "Statements"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/statements/{StatementId}/transactions",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdStatementsStatementIdTransactions",
+      "summary": "Get Statement Transactions for an AccountId",
+      "tags": [
+        "Statements"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/accounts/{AccountId}/transactions",
+      "method": "GET",
+      "operationId": "GetAccountsAccountIdTransactions",
+      "summary": "Get Transactions for an AccountId",
+      "tags": [
+        "Transactions"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/balances",
+      "method": "GET",
+      "operationId": "GetBalances",
+      "summary": "Get Balances",
+      "tags": [
+        "Balances"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/beneficiaries",
+      "method": "GET",
+      "operationId": "GetBeneficiaries",
+      "summary": "Get Beneficiaries",
+      "tags": [
+        "Beneficiaries"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/direct-debits",
+      "method": "GET",
+      "operationId": "GetDirectDebits",
+      "summary": "Get Direct Debits",
+      "tags": [
+        "Direct Debits"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/offers",
+      "method": "GET",
+      "operationId": "GetOffers",
+      "summary": "Get Offers",
+      "tags": [
+        "Offers"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/party",
+      "method": "GET",
+      "operationId": "GetParty",
+      "summary": "Get Party",
+      "tags": [
+        "Parties"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/products",
+      "method": "GET",
+      "operationId": "GetProducts",
+      "summary": "Get Products",
+      "tags": [
+        "Products"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/scheduled-payments",
+      "method": "GET",
+      "operationId": "GetScheduledPayments",
+      "summary": "Get Scheduled Payments",
+      "tags": [
+        "Scheduled Payments"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/standing-orders",
+      "method": "GET",
+      "operationId": "GetStandingOrders",
+      "summary": "Get Standing Orders",
+      "tags": [
+        "Standing Orders"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/statements",
+      "method": "GET",
+      "operationId": "GetStatements",
+      "summary": "Get Statements",
+      "tags": [
+        "Statements"
+      ]
+    },
+    {
+      "api": "Account and Transaction API",
+      "path": "/transactions",
+      "method": "GET",
+      "operationId": "GetTransactions",
+      "summary": "Get Transactions",
+      "tags": [
+        "Transactions"
+      ]
+    },
+    {
+      "api": "Confirmation of Funds API",
+      "path": "/funds-confirmation-consents",
+      "method": "POST",
+      "operationId": "CreateFundsConfirmationConsents",
+      "summary": "Create a Funds Confirmation Consent",
+      "tags": [
+        "Funds Confirmation Consents"
+      ]
+    },
+    {
+      "api": "Confirmation of Funds API",
+      "path": "/funds-confirmation-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "GetFundsConfirmationConsentsConsentId",
+      "summary": "Get a Funds Confirmation Consent",
+      "tags": [
+        "Funds Confirmation Consents"
+      ]
+    },
+    {
+      "api": "Confirmation of Funds API",
+      "path": "/funds-confirmation-consents/{ConsentId}",
+      "method": "DELETE",
+      "operationId": "DeleteFundsConfirmationConsentsConsentId",
+      "summary": "Delete a Funds Confirmation Consent",
+      "tags": [
+        "Funds Confirmation Consents"
+      ]
+    },
+    {
+      "api": "Confirmation of Funds API",
+      "path": "/funds-confirmations",
+      "method": "POST",
+      "operationId": "CreateFundsConfirmations",
+      "summary": "Create a Funds Confirmation Request",
+      "tags": [
+        "Funds Confirmations"
+      ]
+    },
+    {
+      "api": "Event Notification API",
+      "path": "/event-notifications",
+      "method": "POST",
+      "operationId": "CreateEventNotification",
+      "summary": "Send an event notification",
+      "tags": [
+        "Event Notification"
+      ]
+    },
+    {
+      "api": "Events API",
+      "path": "/event-subscriptions",
+      "method": "GET",
+      "operationId": "GetEventSubscriptions",
+      "summary": "Get an Event Subscription",
+      "tags": [
+        "Event Subscriptions"
+      ]
+    },
+    {
+      "api": "Events API",
+      "path": "/event-subscriptions",
+      "method": "POST",
+      "operationId": "CreateEventSubscriptions",
+      "summary": "Create an Event Subscription",
+      "tags": [
+        "Event Subscriptions"
+      ]
+    },
+    {
+      "api": "Events API",
+      "path": "/event-subscriptions/{EventSubscriptionId}",
+      "method": "PUT",
+      "operationId": "ChangeEventSubscriptionsEventSubscriptionId",
+      "summary": "Update an Event Subscription",
+      "tags": [
+        "Event Subscriptions"
+      ]
+    },
+    {
+      "api": "Events API",
+      "path": "/event-subscriptions/{EventSubscriptionId}",
+      "method": "DELETE",
+      "operationId": "DeleteEventSubscriptionsEventSubscriptionId",
+      "summary": "Delete an Event Subscription",
+      "tags": [
+        "Event Subscriptions"
+      ]
+    },
+    {
+      "api": "Events API",
+      "path": "/events",
+      "method": "POST",
+      "operationId": "CreateEvents",
+      "summary": "Create Events",
+      "tags": [
+        "Events"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-payment-consents",
+      "method": "POST",
+      "operationId": "CreateDomesticPaymentConsents",
+      "summary": "Create a Domestic Payment Consent",
+      "tags": [
+        "Domestic Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-payment-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "GetDomesticPaymentConsentsConsentId",
+      "summary": "Get a Domestic Payment Consent",
+      "tags": [
+        "Domestic Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-payment-consents/{ConsentId}/funds-confirmation",
+      "method": "GET",
+      "operationId": "GetDomesticPaymentConsentsConsentIdFundsConfirmation",
+      "summary": "Confirm availability of funds for a Domestic Payment",
+      "tags": [
+        "Domestic Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-payments",
+      "method": "POST",
+      "operationId": "CreateDomesticPayments",
+      "summary": "Initiate a Domestic Payment",
+      "tags": [
+        "Domestic Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-payments/{DomesticPaymentId}",
+      "method": "GET",
+      "operationId": "GetDomesticPaymentsDomesticPaymentId",
+      "summary": "Get a Domestic Payment",
+      "tags": [
+        "Domestic Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-payments/{DomesticPaymentId}/payment-details",
+      "method": "GET",
+      "operationId": "GetDomesticPaymentsDomesticPaymentIdPaymentDetails",
+      "summary": "Get details of a Domestic Payment",
+      "tags": [
+        "Domestic Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-scheduled-payment-consents",
+      "method": "POST",
+      "operationId": "CreateDomesticScheduledPaymentConsents",
+      "summary": "Create a Domestic Scheduled Payment Consent",
+      "tags": [
+        "Domestic Scheduled Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-scheduled-payment-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "GetDomesticScheduledPaymentConsentsConsentId",
+      "summary": "Get a Domestic Scheduled Payment Consent",
+      "tags": [
+        "Domestic Scheduled Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-scheduled-payments",
+      "method": "POST",
+      "operationId": "CreateDomesticScheduledPayments",
+      "summary": "Initiate a Domestic Scheduled Payment",
+      "tags": [
+        "Domestic Scheduled Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-scheduled-payments/{DomesticScheduledPaymentId}",
+      "method": "GET",
+      "operationId": "GetDomesticScheduledPaymentsDomesticScheduledPaymentId",
+      "summary": "Get a Domestic Scheduled Payment",
+      "tags": [
+        "Domestic Scheduled Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-scheduled-payments/{DomesticScheduledPaymentId}/payment-details",
+      "method": "GET",
+      "operationId": "GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetails",
+      "summary": "Get details of a Domestic Scheduled Payment",
+      "tags": [
+        "Domestic Scheduled Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-standing-order-consents",
+      "method": "POST",
+      "operationId": "CreateDomesticStandingOrderConsents",
+      "summary": "Create a Domestic Standing Order Consent",
+      "tags": [
+        "Domestic Standing Order Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-standing-order-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "GetDomesticStandingOrderConsentsConsentId",
+      "summary": "Get a Domestic Standing Order Consent",
+      "tags": [
+        "Domestic Standing Order Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-standing-orders",
+      "method": "POST",
+      "operationId": "CreateDomesticStandingOrders",
+      "summary": "Submit a Domestic Standing Order",
+      "tags": [
+        "Domestic Standing Orders"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-standing-orders/{DomesticStandingOrderId}",
+      "method": "GET",
+      "operationId": "GetDomesticStandingOrdersDomesticStandingOrderId",
+      "summary": "Get a Domestic Standing Order",
+      "tags": [
+        "Domestic Standing Orders"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/domestic-standing-orders/{DomesticStandingOrderId}/payment-details",
+      "method": "GET",
+      "operationId": "GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetails",
+      "summary": "Get details of a Domestic Standing Order Payment",
+      "tags": [
+        "Domestic Standing Orders"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/file-payment-consents",
+      "method": "POST",
+      "operationId": "CreateFilePaymentConsents",
+      "summary": "Create a File Payment Consent",
+      "tags": [
+        "File Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/file-payment-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "GetFilePaymentConsentsConsentId",
+      "summary": "Get a File Payment Consent",
+      "tags": [
+        "File Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/file-payment-consents/{ConsentId}/file",
+      "method": "GET",
+      "operationId": "GetFilePaymentConsentsConsentIdFile",
+      "summary": "Get a File Payment Consent's Uploaded File",
+      "tags": [
+        "File Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/file-payment-consents/{ConsentId}/file",
+      "method": "POST",
+      "operationId": "CreateFilePaymentConsentsConsentIdFile",
+      "summary": "Upload a File for a ConsentId",
+      "tags": [
+        "File Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/file-payments",
+      "method": "POST",
+      "operationId": "CreateFilePayments",
+      "summary": "Submit a File Payment",
+      "tags": [
+        "File Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/file-payments/{FilePaymentId}",
+      "method": "GET",
+      "operationId": "GetFilePaymentsFilePaymentId",
+      "summary": "Get a File Payment by FilePaymentId",
+      "tags": [
+        "File Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/file-payments/{FilePaymentId}/payment-details",
+      "method": "GET",
+      "operationId": "GetFilePaymentsFilePaymentIdPaymentDetails",
+      "summary": "Get payment details for a File Payment",
+      "tags": [
+        "File Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/file-payments/{FilePaymentId}/report-file",
+      "method": "GET",
+      "operationId": "GetFilePaymentsFilePaymentIdReportFile",
+      "summary": "Get a File Payment's Report File",
+      "tags": [
+        "File Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-payment-consents",
+      "method": "POST",
+      "operationId": "CreateInternationalPaymentConsents",
+      "summary": "Create an International Payment Consent",
+      "tags": [
+        "International Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-payment-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "GetInternationalPaymentConsentsConsentId",
+      "summary": "Get an International Payment Consent",
+      "tags": [
+        "International Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-payment-consents/{ConsentId}/funds-confirmation",
+      "method": "GET",
+      "operationId": "GetInternationalPaymentConsentsConsentIdFundsConfirmation",
+      "summary": "Confirm Funds Availability for an International Payment",
+      "tags": [
+        "International Payment Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-payments",
+      "method": "POST",
+      "operationId": "CreateInternationalPayments",
+      "summary": "Initiate an International Payment",
+      "tags": [
+        "International Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-payments/{InternationalPaymentId}",
+      "method": "GET",
+      "operationId": "GetInternationalPaymentsInternationalPaymentId",
+      "summary": "Get an International Payment",
+      "tags": [
+        "International Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-payments/{InternationalPaymentId}/payment-details",
+      "method": "GET",
+      "operationId": "GetInternationalPaymentsInternationalPaymentIdPaymentDetails",
+      "summary": "Get details of an International Payment",
+      "tags": [
+        "International Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-scheduled-payment-consents",
+      "method": "POST",
+      "operationId": "CreateInternationalScheduledPaymentConsents",
+      "summary": "Create an International Scheduled Payment Consent",
+      "tags": [
+        "International Scheduled Payments Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-scheduled-payment-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "GetInternationalScheduledPaymentConsentsConsentId",
+      "summary": "Get an International Scheduled Payment Consent",
+      "tags": [
+        "International Scheduled Payments Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-scheduled-payment-consents/{ConsentId}/funds-confirmation",
+      "method": "GET",
+      "operationId": "GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmation",
+      "summary": "Confirm Funds Availability for an International Scheduled Payment",
+      "tags": [
+        "International Scheduled Payments Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-scheduled-payments",
+      "method": "POST",
+      "operationId": "CreateInternationalScheduledPayments",
+      "summary": "Initiate an International Scheduled Payment",
+      "tags": [
+        "International Scheduled Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-scheduled-payments/{InternationalScheduledPaymentId}",
+      "method": "GET",
+      "operationId": "GetInternationalScheduledPaymentsInternationalScheduledPaymentId",
+      "summary": "Get an International Scheduled Payment",
+      "tags": [
+        "International Scheduled Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-scheduled-payments/{InternationalScheduledPaymentId}/payment-details",
+      "method": "GET",
+      "operationId": "GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetails",
+      "summary": "Get details of an International Scheduled Payment",
+      "tags": [
+        "International Scheduled Payments"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-standing-order-consents",
+      "method": "POST",
+      "operationId": "CreateInternationalStandingOrderConsents",
+      "summary": "Create an International Standing Order Consent",
+      "tags": [
+        "International Standing Orders Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-standing-order-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "GetInternationalStandingOrderConsentsConsentId",
+      "summary": "Get an International Standing Order Consent",
+      "tags": [
+        "International Standing Orders Consents"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-standing-orders",
+      "method": "POST",
+      "operationId": "CreateInternationalStandingOrders",
+      "summary": "Submit an International Standing Order",
+      "tags": [
+        "International Standing Orders"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-standing-orders/{InternationalStandingOrderPaymentId}",
+      "method": "GET",
+      "operationId": "GetInternationalStandingOrdersInternationalStandingOrderPaymentId",
+      "summary": "Get an International Standing Order",
+      "tags": [
+        "International Standing Orders"
+      ]
+    },
+    {
+      "api": "Payment Initiation API",
+      "path": "/international-standing-orders/{InternationalStandingOrderPaymentId}/payment-details",
+      "method": "GET",
+      "operationId": "GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetails",
+      "summary": "Get details of an International Standing Order Payment",
+      "tags": [
+        "International Standing Orders"
+      ]
+    },
+    {
+      "api": "Variable Recurring Payments API",
+      "path": "/domestic-vrp-consents",
+      "method": "POST",
+      "operationId": "domesticVrpConsentsPost",
+      "summary": "Create a domestic VRP consent",
+      "tags": [
+        "Domestic VRP Consents"
+      ]
+    },
+    {
+      "api": "Variable Recurring Payments API",
+      "path": "/domestic-vrp-consents/{ConsentId}",
+      "method": "GET",
+      "operationId": "domesticVrpConsentsGet",
+      "summary": "Get a Domestic VRP Consent",
+      "tags": [
+        "Domestic VRP Consents"
+      ]
+    },
+    {
+      "api": "Variable Recurring Payments API",
+      "path": "/domestic-vrp-consents/{ConsentId}",
+      "method": "PUT",
+      "operationId": "domesticVrpConsentsPut",
+      "summary": "Replace an existing domestic VRP consent",
+      "tags": [
+        "Domestic VRP Consents"
+      ]
+    },
+    {
+      "api": "Variable Recurring Payments API",
+      "path": "/domestic-vrp-consents/{ConsentId}",
+      "method": "PATCH",
+      "operationId": "domesticVrpConsentsPatch",
+      "summary": "Update an existing domestic VRP consent",
+      "tags": [
+        "Domestic VRP Consents"
+      ]
+    },
+    {
+      "api": "Variable Recurring Payments API",
+      "path": "/domestic-vrp-consents/{ConsentId}",
+      "method": "DELETE",
+      "operationId": "domesticVrpConsentsDelete",
+      "summary": "Delete a Domestic VRP Consent",
+      "tags": [
+        "Domestic VRP Consents"
+      ]
+    },
+    {
+      "api": "Variable Recurring Payments API",
+      "path": "/domestic-vrp-consents/{ConsentId}/funds-confirmation",
+      "method": "POST",
+      "operationId": "domesticVrpConsentsFundsConfirmation",
+      "summary": "Confirm Funds Availability for a Domestic VRP",
+      "tags": [
+        "Domestic VRP Consents"
+      ]
+    },
+    {
+      "api": "Variable Recurring Payments API",
+      "path": "/domestic-vrps",
+      "method": "POST",
+      "operationId": "domesticVrpPost",
+      "summary": "Initiate a Domestic VRP",
+      "tags": [
+        "Domestic VRPs"
+      ]
+    },
+    {
+      "api": "Variable Recurring Payments API",
+      "path": "/domestic-vrps/{DomesticVRPId}",
+      "method": "GET",
+      "operationId": "domesticVrpGet",
+      "summary": "Get a Domestic VRP",
+      "tags": [
+        "Domestic VRPs"
+      ]
+    },
+    {
+      "api": "Variable Recurring Payments API",
+      "path": "/domestic-vrps/{DomesticVRPId}/payment-details",
+      "method": "GET",
+      "operationId": "domesticVrpPaymentDetailsGet",
+      "summary": "Get details of a Domestic VRP Payment",
+      "tags": [
+        "Domestic VRPs"
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "name": "OBIntermediaryAgent",
+      "description": "The intermediary agent associated with this transaction.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "ExternalCreditorReferenceType1Code",
+      "description": "Specifies the type of creditor reference as published in an external creditor reference type code set. For more information see `ExternalCreditorReferenceType1Code` in *ISO_External_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "DISP",
+        "FXDR",
+        "PUOR",
+        "RPIN",
+        "RADM",
+        "SCOR"
+      ]
+    },
+    {
+      "name": "ExternalDocumentType1Code",
+      "description": "Specifies the document type as published in an external document type code list. For more information see `ExternalDocumentType1Code` in *ISO_External_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "AROI",
+        "BOLD",
+        "CINV",
+        "CMCN",
+        "CNFA",
+        "CONT",
+        "CREN",
+        "DEBN",
+        "DISP",
+        "DNFA",
+        "HIRI",
+        "INVS",
+        "MSIN",
+        "PROF",
+        "PUOR",
+        "QUOT",
+        "SBIN",
+        "SOAC",
+        "SPRR",
+        "TISH",
+        "TSUT",
+        "USAR",
+        "VCHR"
+      ]
+    },
+    {
+      "name": "OBReferredDocumentInformation",
+      "description": "",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBRemittanceInformation2",
+      "description": "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBRemittanceInformationStructured",
+      "description": "",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBUltimateCreditor1",
+      "description": "Ultimate party to which an amount of money is due.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBUltimateDebtor1",
+      "description": "Ultimate party that owes an amount of money to the (ultimate) creditor.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBFrequency6",
+      "description": "Regularity with which credit transfer instructions are to be created and processed",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "PointInTime",
+      "description": "Exact2NumericText - Further information on the exact point in time the event should take place. Specifies a frequency in terms of an exact point in time or moment within a specified frequency type. Note: should not be used alongside `CountPerPeriod`.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBFrequency6Code",
+      "description": "For a full list of values see `OBFrequency6Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "ADHO",
+        "YEAR",
+        "DAIL",
+        "FRTN",
+        "INDA",
+        "MNTH",
+        "QURT",
+        "MIAN",
+        "WEEK",
+        "WODL",
+        "FOWK",
+        "TWMH",
+        "FOMH",
+        "FIMH",
+        "ALMH",
+        "NONE",
+        "LWMH",
+        "LXMH",
+        "TWYR"
+      ]
+    },
+    {
+      "name": "OBProxy1",
+      "description": "Specifies an alternate assumed name for the identification of the account.",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "ExternalProxyAccountType1Code",
+      "description": "Specifies the external proxy account type code, as published in the proxy account type external code set.<br /> For more information and a full list of values see `ExternalProxyAccountType1Code` in *ISO_External_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "TELE",
+        "EMAL",
+        "DNAM",
+        "CINC",
+        "COTX",
+        "COID",
+        "CUST",
+        "DRLC",
+        "EIDN",
+        "EWAL",
+        "PVTX",
+        "LEIC",
+        "MBNO",
+        "NIDN",
+        "CCPT",
+        "SHID",
+        "SOSE",
+        "TOKN",
+        "UBIL",
+        "VIPN",
+        "BIID"
+      ]
+    },
+    {
+      "name": "AccountId",
+      "description": "A unique and immutable identifier used to identify the account resource. This identifier has no meaning to the account owner.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "ActiveOrHistoricCurrencyCode_0",
+      "description": "Identification of the currency in which the account is held. \nUsage: Currency should only be used in case one and the same account number covers several currencies\nand the initiating party needs to identify which currency needs to be used for settlement on the account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "ActiveOrHistoricCurrencyCode_1",
+      "description": "A code allocated to a currency by a Maintenance Agency under an international identification scheme, as described in the latest edition of the international standard ISO 4217 \"Codes for the representation of currencies and funds\".",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "AddressLine",
+      "description": "Information that locates and identifies a specific address for a transaction entry, that is presented in free format text.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "BeneficiaryId",
+      "description": "A unique and immutable identifier used to identify the beneficiary resource. This identifier has no meaning to the account owner.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "BookingDateTime",
+      "description": "Date and time when a transaction entry is posted to an account on the account servicer's books.\nUsage: Booking date is the expected booking date, unless the status is booked, in which case it is the actual booking date. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "BuildingName",
+      "description": "Name of a referenced building.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "BuildingNumber",
+      "description": "Number that identifies the position of a building on a street.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "CareOf",
+      "description": "The 'care of' address is used whenever sending mail to a person or organisation who does not actually live or work at the address. They will receive the mail for the individual.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "CountryCode",
+      "description": "Nation with its own government, occupying a particular territory.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "CountrySubDivision",
+      "description": "Identifies a subdivision of a country eg, state, region, county.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "CreationDateTime",
+      "description": "Date and time at which the resource was created. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Date",
+      "description": "Date and time associated with the date time type. All dates in the JSON payloads are represented in ISO 8601 date format. \n An example is below:\n2017-04-05",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "DateTime",
+      "description": "Date and time associated with the date time type. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "DebtorReference",
+      "description": "A reference value provided by the PSU to the PISP while setting up the scheduled payment.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Description_0",
+      "description": "Specifies the description of the account type.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Description_1",
+      "description": "Description that may be available for the statement fee.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Description_2",
+      "description": "Description that may be available for the statement interest.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Description_3",
+      "description": "Description to describe the purpose of the code",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "DirectDebitId",
+      "description": "A unique and immutable identifier used to identify the direct debit resource. This identifier has no meaning to the account owner.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "DistrictName",
+      "description": "Number that of the regional area, known as a district, which forms part of an address",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "EmailAddress",
+      "description": "Address for electronic mail (e-mail).",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "EndDateTime",
+      "description": "Date and time at which the statement period ends. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "File",
+      "description": "",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "FinalPaymentDateTime",
+      "description": "The date on which the final payment for a Standing Order schedule will be made. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "FirstPaymentDateTime",
+      "description": "The date on which the first payment for a Standing Order schedule will be made. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Floor",
+      "description": "Number that identifies the level within a building",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Frequency_1",
+      "description": "Individual Definitions:\nNotKnown - Not Known\nEvryDay - Every day\nEvryWorkgDay - Every working day\nIntrvlDay - An interval specified in number of calendar days (02 to 31)\nIntrvlWkDay - An interval specified in weeks (01 to 09), and the day within the week (01 to 07)\nWkInMnthDay - A monthly interval, specifying the week of the month (01 to 05) and day within the week (01 to 07)\nIntrvlMnthDay - An interval specified in months (between 01 to 06, 12, 24), specifying the day within the month (-05 to -01, 01 to 31)\nQtrDay - Quarterly (either ENGLISH, SCOTTISH, or RECEIVED)\nENGLISH = Paid on the 25th March, 24th June, 29th September and 25th December.\nSCOTTISH = Paid on the 2nd February, 15th May, 1st August and 11th November.\nRECEIVED = Paid on the 20th March, 19th June, 24th September and 20th December.\nIndividual Patterns:\nNotKnown (ScheduleCode)\nEvryDay (ScheduleCode)\nEvryWorkgDay (ScheduleCode)\nIntrvlDay:NoOfDay (ScheduleCode + NoOfDay)\nIntrvlWkDay:IntervalInWeeks:DayInWeek (ScheduleCode + IntervalInWeeks + DayInWeek)\nWkInMnthDay:WeekInMonth:DayInWeek (ScheduleCode + WeekInMonth + DayInWeek)\nIntrvlMnthDay:IntervalInMonths:DayInMonth (ScheduleCode + IntervalInMonths + DayInMonth)\nQtrDay: + either (ENGLISH, SCOTTISH or RECEIVED) ScheduleCode + QuarterDay\nThe regular expression for this element combines five smaller versions for each permitted pattern. To aid legibility - the components are presented individually here:\nNotKnown\nEvryDay\nEvryWorkgDay\nIntrvlDay:((0[2-9])|([1-2][0-9])|3[0-1])\nIntrvlWkDay:0[1-9]:0[1-7]\nWkInMnthDay:0[1-5]:0[1-7]\nIntrvlMnthDay:(0[1-6]|12|24):(-0[1-5]|0[1-9]|[12][0-9]|3[01])\nQtrDay:(ENGLISH|SCOTTISH|RECEIVED)\nFull Regular Expression:\n^(NotKnown)$|^(EvryDay)$|^(EvryWorkgDay)$|^(IntrvlDay:((0[2-9])|([1-2][0-9])|3[0-1]))$|^(IntrvlWkDay:0[1-9]:0[1-7])$|^(WkInMnthDay:0[1-5]:0[1-7])$|^(IntrvlMnthDay:(0[1-6]|12|24):(-0[1-5]|0[1-9]|[12][0-9]|3[01]))$|^(QtrDay:(ENGLISH|SCOTTISH|RECEIVED))$",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "FullLegalName",
+      "description": "The full legal name of the party.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "ISODateTime",
+      "description": "All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Events API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Identification_0",
+      "description": "Identification assigned by an institution to identify an account. This identification is known by the account owner.",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Identification_1",
+      "description": "Unique and unambiguous identification of the servicing institution.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Identification_2",
+      "description": "Unique and unambiguous identification of a financial institution or a branch of a financial institution.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Identification_3",
+      "description": "Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Identification_4",
+      "description": "Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "LastPaymentDateTime",
+      "description": "The date on which the last (most recent) payment for a Standing Order schedule was made. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "LEI",
+      "description": "Legal entity identification as an alternate identification for a party. Legal Entity Identifier is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Links",
+      "description": "Links relevant to the payload",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Events API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "MandateIdentification",
+      "description": "Direct Debit reference. For AUDDIS service users provide Core Reference. For non AUDDIS service users provide Core reference if possible or last used reference.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "MaturityDate",
+      "description": "Maturity date of the account. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Meta",
+      "description": "Meta Data relevant to the payload",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Events API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "Name_0",
+      "description": "The account name is the name or names of the account owner(s) represented at an account level, as displayed by the ASPSP's online channels.\nNote, the account name is not the product name or the nickname of the account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Name_1",
+      "description": "Name by which an agent is known and which is usually used to identify that agent.",
+      "apis": [
+        "Account and Transaction API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Name_2",
+      "description": "Name of Service User.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Name_3",
+      "description": "Name by which a party is known and which is usually used to identify that party.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Name_4",
+      "description": "Long name associated with the code",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "NextPaymentDateTime",
+      "description": "The date on which the next payment for a Standing Order schedule will be made. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Nickname",
+      "description": "The nickname of the account, assigned by the account owner in order to provide an additional means of identification of the account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "NumberOfPayments",
+      "description": "Number of the payments that will be made in completing this frequency sequence including any executed since the sequence start date.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Number_0",
+      "description": "Indicates whether the advertised overdraft rate is guaranteed to be offered to a borrower by the bank e.g. if it s part of a government scheme, or whether the rate may vary dependent on the applicant s circumstances.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "integer",
+      "enumValues": []
+    },
+    {
+      "name": "Number_1",
+      "description": "fee/charges are captured dependent on the number of occurrences rather than capped at a particular amount",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "integer",
+      "enumValues": []
+    },
+    {
+      "name": "OBAccount6",
+      "description": "Unambiguous identification of the account to which credit and debit entries are made. The following fields are optional only for accounts that are switched:\n\n  * Data.Currency  \n  * Data.AccountCategory  \n  * Data.AccountTypeCode\n\nFor all other accounts, the fields must be populated by the ASPSP.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBAccount6Basic",
+      "description": "Unambiguous identification of the account to which credit and debit entries are made.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBAccount6Detail",
+      "description": "Unambiguous identification of the account to which credit and debit entries are made.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalAccountStatus1Code",
+      "description": "Specifies the status of account resource in code form. <br />\nFor a full list of enumeration values refer to `OBInternalAccountStatus1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Deleted",
+        "Disabled",
+        "Enabled",
+        "Pending",
+        "ProForma"
+      ]
+    },
+    {
+      "name": "OBActiveCurrencyAndAmount_SimpleType",
+      "description": "A number of monetary units specified in an active currency where the unit of currency is explicit and compliant with ISO 4217.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_0",
+      "description": "The amount of the most recent direct debit collection.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_1",
+      "description": "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.\nUsage: This amount has to be transported unchanged through the transaction chain.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_10",
+      "description": "Transaction charges to be paid by the charge bearer.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_11",
+      "description": "The amount of the last (most recent) Standing Order instruction.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_2",
+      "description": "The amount of the first Standing Order",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_3",
+      "description": "The amount of the next Standing Order.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_4",
+      "description": "The amount of the final Standing Order",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_5",
+      "description": "Amount of money associated with the statement benefit type.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_6",
+      "description": "Amount of money associated with the statement fee type.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_7",
+      "description": "Amount of money associated with the statement interest amount type.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_8",
+      "description": "Amount of money associated with the amount type.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount_9",
+      "description": "Amount of money in the cash transaction entry.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBAddressType2Code",
+      "description": "Identifies the nature of the postal address. <br /> For a full set of codes see `OBAddressType2Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets).",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "BIZZ",
+        "DLVY",
+        "MLTO",
+        "PBOX",
+        "ADDR",
+        "HOME",
+        "CORR",
+        "STAT"
+      ]
+    },
+    {
+      "name": "OBBCAData1",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBalanceType1Code",
+      "description": "Balance type, in a coded form. <br /> For a full list of enumeration values refer to `ExternalBalanceType1Code` in *ISO_External_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets).",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "CLAV",
+        "CLBD",
+        "FWAV",
+        "INFO",
+        "ITAV",
+        "ITBD",
+        "OPAV",
+        "OPBD",
+        "PRCD",
+        "XPCD"
+      ]
+    },
+    {
+      "name": "OBBankTransactionCodeStructure1",
+      "description": "Set of elements used to fully identify the type of underlying transaction resulting in an entry.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBeneficiary5",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBeneficiary5Basic",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBeneficiary5Detail",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBranchAndFinancialInstitutionIdentification5_0",
+      "description": "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBranchAndFinancialInstitutionIdentification5_1",
+      "description": "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\nThis is the servicer of the beneficiary account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBranchAndFinancialInstitutionIdentification6_0",
+      "description": "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\nThis is the servicer of the beneficiary account.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBranchAndFinancialInstitutionIdentification6_1",
+      "description": "Financial institution servicing an account for the creditor.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBranchAndFinancialInstitutionIdentification6_2",
+      "description": "Financial institution servicing an account for the debtor.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBCashAccount5_0",
+      "description": "Provides the details to identify the beneficiary account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBCashAccount5_1",
+      "description": "Provides the details to identify the beneficiary account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBCashAccount6_0",
+      "description": "Unambiguous identification of the account of the creditor, in the case of a debit transaction.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBCashAccount6_1",
+      "description": "Unambiguous identification of the account of the debtor, in the case of a credit transaction.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "ExternalCategoryPurpose1Code",
+      "description": "Enumeration of codes that outlines the type of purpose behind a transaction, payment or risk.  For all enum values see `ExternalCategoryPurpose1Code` in *ISO_External_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "BONU",
+        "CASH",
+        "CBLK",
+        "CCRD",
+        "CGWV",
+        "CIPC",
+        "CONC",
+        "CORT",
+        "DCRD",
+        "DIVI",
+        "DVPM",
+        "EPAY",
+        "FCDT",
+        "FCIN",
+        "FCOL",
+        "GOVT",
+        "GP2P",
+        "HEDG",
+        "ICCP",
+        "IDCP",
+        "INTC",
+        "INTE",
+        "LBOX",
+        "LOAN",
+        "MP2B",
+        "MP2P",
+        "OTHR",
+        "PENS",
+        "RPRE",
+        "RRCT",
+        "RVPM",
+        "SALA",
+        "SECU",
+        "SSBE",
+        "SUPP",
+        "SWEP",
+        "TAXS",
+        "TOPG",
+        "TRAD",
+        "TREA",
+        "VATX",
+        "VOST",
+        "WHLD",
+        "ZABA"
+      ]
+    },
+    {
+      "name": "OBExternalMandateClassification1Code",
+      "description": "Type of mandate instruction. For a full list of values see `OBExternalClassification1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FIXE",
+        "USGB",
+        "VARI"
+      ]
+    },
+    {
+      "name": "OBCommunicationMethod",
+      "description": "For a full list of enumeration values see `OBExternalCommunicationMethod2Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_internal_CodeSets) ",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "EMAL",
+        "FAXI",
+        "FILE",
+        "ONLI",
+        "POST"
+      ]
+    },
+    {
+      "name": "OBCreditDebitCode_0",
+      "description": "Indicates whether the amount is a credit or a debit. For a full list of values see `OBInternalCreditDebitCode` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)<br />\nUsage: A zero amount is considered to be a credit amount.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Credit",
+        "Debit"
+      ]
+    },
+    {
+      "name": "OBCreditDebitCode_1",
+      "description": "Indicates whether the transaction is a credit or a debit entry. <br />\n<br />\nFor a full list of enumeration values refer to `OBInternalCreditDebitCode` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Credit",
+        "Debit"
+      ]
+    },
+    {
+      "name": "OBCreditDebitCode_2",
+      "description": "Indicates whether the balance is a credit or a debit balance. \nUsage: A zero balance is considered to be a credit balance.\n<br />\nFor a full list of enumeration values refer to `OBInternalCreditDebitCode` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Credit",
+        "Debit"
+      ]
+    },
+    {
+      "name": "OBCurrencyExchange5",
+      "description": "Set of elements used to provide details on the currency exchange.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "ExternalEntryStatus1Code",
+      "description": "Status of a transaction entry on the books of the account servicer. <br />\nFor a full list of enumeration values refer to `ExternalEntryStatus1Code` in *ISO_External_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "BOOK",
+        "FUTR",
+        "INFO",
+        "PDNG",
+        "RJCT"
+      ]
+    },
+    {
+      "name": "OBInternalTransactionMutability1Code",
+      "description": "Specifies the Mutability of the Transaction record. <br />\nFor a full list of enumeration values refer to `OBInternalTransactionMutability1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Mutable",
+        "Immutable"
+      ]
+    },
+    {
+      "name": "OBError1",
+      "description": "",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Events API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBErrorResponse1",
+      "description": "An array of detail error codes, and messages, and URLs to documentation to help remediation.",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Events API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalAccountIdentification4Code",
+      "description": "Name of the identification scheme, in a coded form as published in an external list. <br /> For a full list of enumeration values refer to `OBInternalAccountIdentification4Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalAccountRole1Code",
+      "description": "A party\u2019s role with respect to the related account. For a full list refer to `OBInternalAccountRole1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBExternalAccountSubType1Code",
+      "description": "Specifies the sub type of account (product family group) <br /> For a full list of enumeration values refer to `OBExternalCashAccountType1Code` *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "CACC",
+        "CARD",
+        "CASH",
+        "CHAR",
+        "CISH",
+        "COMM",
+        "CPAC",
+        "LLSV",
+        "LOAN",
+        "MGLD",
+        "MOMA",
+        "NREX",
+        "ODFT",
+        "ONDP",
+        "OTHR",
+        "SACC",
+        "SLRY",
+        "SVGS",
+        "TAXE",
+        "TRAN",
+        "TRAS",
+        "VACC",
+        "NFCA",
+        "MORT",
+        "WALT"
+      ]
+    },
+    {
+      "name": "OBInternalAccountType1Code",
+      "description": "Specifies the type of account (personal or business). <br /> For a full list of enumeration values refer to 'OBInternalAccountType1Code' in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Business",
+        "Personal"
+      ]
+    },
+    {
+      "name": "OBExternalBalanceSubType1Code",
+      "description": "Amount sub type, in a coded form. Default if not specified is BCUR of the account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "BCUR",
+        "LCUR"
+      ]
+    },
+    {
+      "name": "OBInternalFinancialInstitutionIdentification4Code",
+      "description": "Name of the identification scheme, in a coded form as published in an external list.<br/> For a full list of enumeration values refer to `OBInternalFinancialInstitutionIdentification4Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalSwitchStatusCode",
+      "description": "Specifies the switch status for the account, in a coded form. <br /> For a full list of enumeration values refer to `OBInternalSwitchStatusCode` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalLegalStructureType1Code",
+      "description": "Legal standing of the party. For a full list refer to `OBInternalLegalStructureType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalPartyType1Code",
+      "description": "Party type, in a coded form. For a full list see `OBInternalPartyType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Delegate",
+        "Joint",
+        "Sole"
+      ]
+    },
+    {
+      "name": "OBExternalPurpose1Code",
+      "description": "For a full list of enumeration values refer to `ExternalPurpose1Code` in *ISO_External_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "BKDF",
+        "BKFE",
+        "BKFM",
+        "BKIP",
+        "BKPP",
+        "CBLK",
+        "CDCB",
+        "CDCD",
+        "CDCS",
+        "CDDP",
+        "CDOC",
+        "CDQC",
+        "ETUP",
+        "FCOL",
+        "MTUP",
+        "ACCT",
+        "CASH",
+        "COLL",
+        "CSDB",
+        "DEPT",
+        "INTC",
+        "INTP",
+        "LIMA",
+        "NETT",
+        "BFWD",
+        "CCIR",
+        "CCPC",
+        "CCPM",
+        "CCSM",
+        "CRDS",
+        "CRPR",
+        "CRSP",
+        "CRTL",
+        "EQPT",
+        "EQUS",
+        "EXPT",
+        "EXTD",
+        "FIXI",
+        "FWBC",
+        "FWCC",
+        "FWSB",
+        "FWSC",
+        "MARG",
+        "MBSB",
+        "MBSC",
+        "MGCC",
+        "MGSC",
+        "OCCC",
+        "OPBC",
+        "OPCC",
+        "OPSB",
+        "OPSC",
+        "OPTN",
+        "OTCD",
+        "REPO",
+        "RPBC",
+        "RPCC",
+        "RPSB",
+        "RPSC",
+        "RVPO",
+        "SBSC",
+        "SCIE",
+        "SCIR",
+        "SCRP",
+        "SHBC",
+        "SHCC",
+        "SHSL",
+        "SLEB",
+        "SLOA",
+        "SWBC",
+        "SWCC",
+        "SWPT",
+        "SWSB",
+        "SWSC",
+        "TBAS",
+        "TBBC",
+        "TBCC",
+        "TRCP",
+        "AGRT",
+        "AREN",
+        "BEXP",
+        "BOCE",
+        "COMC",
+        "CPYR",
+        "GDDS",
+        "GDSV",
+        "GSCB",
+        "LICF",
+        "MP2B",
+        "POPE",
+        "ROYA",
+        "SCVE",
+        "SERV",
+        "SUBS",
+        "SUPP",
+        "TRAD",
+        "CHAR",
+        "COMT",
+        "MP2P",
+        "ECPG",
+        "ECPR",
+        "ECPU",
+        "EPAY",
+        "CLPR",
+        "COMP",
+        "DBTC",
+        "GOVI",
+        "HLRP",
+        "HLST",
+        "INPC",
+        "INPR",
+        "INSC",
+        "INSU",
+        "INTE",
+        "LBRI",
+        "LIFI",
+        "LOAN",
+        "LOAR",
+        "PENO",
+        "PPTI",
+        "RELG",
+        "RINP",
+        "TRFD",
+        "FORW",
+        "FXNT",
+        "ADMG",
+        "ADVA",
+        "BCDM",
+        "BCFG",
+        "BLDM",
+        "BNET",
+        "CBFF",
+        "CBFR",
+        "CCRD",
+        "CDBL",
+        "CFEE",
+        "CGDD",
+        "CORT",
+        "COST",
+        "CPKC",
+        "DCRD",
+        "DSMT",
+        "DVPM",
+        "EDUC",
+        "FACT",
+        "FAND",
+        "FCPM",
+        "FEES",
+        "GIFT",
+        "GOVT",
+        "ICCP",
+        "IDCP",
+        "IHRP",
+        "INSM",
+        "IVPT",
+        "MCDM",
+        "MCFG",
+        "MSVC",
+        "NOWS",
+        "OCDM",
+        "OCFG",
+        "OFEE",
+        "OTHR",
+        "PADD",
+        "PTSP",
+        "RCKE",
+        "RCPT",
+        "REBT",
+        "REFU",
+        "RENT",
+        "REOD",
+        "RIMB",
+        "RPNT",
+        "RRBN",
+        "RRCT",
+        "RRTP",
+        "RVPM",
+        "SLPI",
+        "SPLT",
+        "STDY",
+        "TBAN",
+        "TBIL",
+        "TCSC",
+        "TELI",
+        "TMPG",
+        "TPRI",
+        "TPRP",
+        "TRNC",
+        "TRVC",
+        "WEBI",
+        "IPAY",
+        "IPCA",
+        "IPDO",
+        "IPEA",
+        "IPEC",
+        "IPEW",
+        "IPPS",
+        "IPRT",
+        "IPU2",
+        "IPUW",
+        "ANNI",
+        "CAFI",
+        "CFDI",
+        "CMDT",
+        "DERI",
+        "DIVD",
+        "FREX",
+        "HEDG",
+        "INVS",
+        "PRME",
+        "SAVG",
+        "SECU",
+        "SEPI",
+        "TREA",
+        "UNIT",
+        "FNET",
+        "FUTR",
+        "ANTS",
+        "CVCF",
+        "DMEQ",
+        "DNTS",
+        "HLTC",
+        "HLTI",
+        "HSPC",
+        "ICRF",
+        "LTCF",
+        "MAFC",
+        "MARF",
+        "MDCS",
+        "VIEW",
+        "CDEP",
+        "SWFP",
+        "SWPP",
+        "SWRS",
+        "SWUF",
+        "ADCS",
+        "AEMP",
+        "ALLW",
+        "ALMY",
+        "BBSC",
+        "BECH",
+        "BENE",
+        "BONU",
+        "CCHD",
+        "COMM",
+        "CSLP",
+        "GFRP",
+        "GVEA",
+        "GVEB",
+        "GVEC",
+        "GVED",
+        "GWLT",
+        "HREC",
+        "PAYR",
+        "PEFC",
+        "PENS",
+        "PRCP",
+        "RHBS",
+        "SALA",
+        "SPSP",
+        "SSBE",
+        "LBIN",
+        "LCOL",
+        "LFEE",
+        "LMEQ",
+        "LMFI",
+        "LMRK",
+        "LREB",
+        "LREV",
+        "LSFL",
+        "ESTX",
+        "FWLV",
+        "GSTX",
+        "HSTX",
+        "INTX",
+        "NITX",
+        "PTXP",
+        "RDTX",
+        "TAXS",
+        "VATX",
+        "WHLD",
+        "TAXR",
+        "B112",
+        "BR12",
+        "TLRF",
+        "TLRR",
+        "AIRB",
+        "BUSB",
+        "FERB",
+        "RLWY",
+        "TRPT",
+        "CBTV",
+        "ELEC",
+        "ENRG",
+        "GASB",
+        "NWCH",
+        "NWCM",
+        "OTLC",
+        "PHON",
+        "UBIL",
+        "WTER",
+        "BOND",
+        "CABD",
+        "CAEQ",
+        "CBCR",
+        "DBCR",
+        "DICL",
+        "EQTS",
+        "FLCR",
+        "EFTC",
+        "EFTD",
+        "MOMA",
+        "RAPI",
+        "GAMB",
+        "LOTT",
+        "AMEX",
+        "SASW",
+        "AUCO",
+        "PCOM",
+        "PDEP",
+        "PLDS",
+        "PLRF",
+        "GAFA",
+        "GAHO",
+        "CPEN",
+        "DEPD",
+        "RETL",
+        "DEBT",
+        "CRYP"
+      ]
+    },
+    {
+      "name": "OBInternalScheduleType1Code",
+      "description": "Specifies the scheduled payment date type requested. For a full list of enumeration values refer to `OBInternalScheduleType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Arrival",
+        "Execution"
+      ]
+    },
+    {
+      "name": "ExternalMandateStatus1Code",
+      "description": "Specifies the status of the standing order in code form. For a full list of enumeration values refer to 'ExternalMandateStatus1Code' in *ISO_External_Codeset* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "ACTV",
+        "CANC",
+        "EXPI",
+        "SUSP"
+      ]
+    },
+    {
+      "name": "OBInternalStatementAmountType1Code",
+      "description": "Amount type, in a coded form.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementBenefitType1Code",
+      "description": "Benefit type, in a coded form. For a full list of values see `OBInternalStatementBenefitType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementDateTimeType1Code",
+      "description": "Date time type, in a coded form. For a full list of values see `OBInternalStatementDateTimeType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementFeeFrequency1Code",
+      "description": "How frequently the fee is applied to the Account. For a full list of values see `OBInternalStatementFeeFrequency1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementFeeRateType1Code",
+      "description": "This code indicates the specific type of fee rate (e.g., AER, EAR). For a full list of values see `OBInternalStatementFeeRateType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementFeeType1Code",
+      "description": "Fee type, in a coded form. For a full list of values see `OBInternalStatementFeeType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementInterestFrequency1Code",
+      "description": "Specifies the statement fee type requested. For a full list of values see `OBInternalStatementInterestFrequency1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementInterestRateType1Code",
+      "description": "This code specifies the type of interest (e.g., BOE Base Rate, Fixed Rate, Gross).",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementInterestType1Code",
+      "description": "Interest amount type, in a coded form. For a full list of values see `OBInternalStatementInterestType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementRateType1Code",
+      "description": "Statement rate type, in a coded form. For a full list of values see `OBInternalStatementRateType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalStatementType1Code",
+      "description": "Statement type, in a coded form. For a full list of values see `OBInternalStatementType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "AccountClosure",
+        "AccountOpening",
+        "Annual",
+        "Interim",
+        "RegularPeriodic"
+      ]
+    },
+    {
+      "name": "OBInternalStatementValueType1Code",
+      "description": "Statement value type, in a coded form. For a full list of values see `OBInternalStatementValueType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBFrequency2",
+      "description": "For a full list of enumeration values refer to `OBFrequency2Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "YEAR",
+        "DAIL",
+        "INDA",
+        "MNTH",
+        "QURT",
+        "MIAN",
+        "TEND",
+        "MOVE",
+        "WEEK",
+        "NONE",
+        "SLCT"
+      ]
+    },
+    {
+      "name": "OBFrequencyPeriodType",
+      "description": "Individual Definitions:\n ADHO - Adhoc \n YEAR - Annual\nDAIL - Daily\nINDA - Intra Day\nMNTH - Monthly\nQURT - Quarterly\nWEEK - Weekly ",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "ADHO",
+        "YEAR",
+        "DAIL",
+        "INDA",
+        "MNTH",
+        "QURT",
+        "MIAN",
+        "WEEK"
+      ]
+    },
+    {
+      "name": "OBFileFormat",
+      "description": "For a full list of enumeration values refer to `ExternalDocumentFormat1Code` in *ISO_External_CodeSet* [here](https://github.com/OpenBankingUK/External_internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "DPDF",
+        "DXML",
+        "SDSH",
+        "WORD",
+        "XSLT",
+        "DCSV"
+      ]
+    },
+    {
+      "name": "OBExternalStatusReason1Code",
+      "description": "Low level textual error code, for all enum values see `OBExternalStatusReason1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Events API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBMandateRelatedInformation1",
+      "description": "Provides further details of the mandate signed between the creditor and the debtor.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBMerchantDetails1",
+      "description": "Details of the merchant involved in the transaction.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBPCAData1",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBParty2",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBPartyRelationships1",
+      "description": "The Party's relationships with other resources.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBPostalAddress7",
+      "description": "Information that locates and identifies a specific address, as defined by postal services.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBRate1_0",
+      "description": "Rate charged for Statement Fee (where it is charged in terms of a rate rather than an amount)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "number",
+      "enumValues": []
+    },
+    {
+      "name": "OBRate1_1",
+      "description": "Rate for Statement Interest (where it is applicable in terms of a rate rather than an amount)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "number",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadAccount6",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadBalance1",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadBeneficiary5",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadConsent1",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadConsentResponse1",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalConsentStatus1Code",
+      "description": "Specifies the status of consent resource in code form.",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "AWAU",
+        "RJCT",
+        "AUTH",
+        "CANC",
+        "EXPD"
+      ]
+    },
+    {
+      "name": "OBReadDataStatement2",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadDataTransaction6",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadDirectDebit2",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadOffer1",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadParty2",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadParty3",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadProduct2",
+      "description": "Product details of Other Product which is not available in the standard list",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadScheduledPayment3",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadStandingOrder6",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadStatement2",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBReadTransaction6",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBScheduledPayment3",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBScheduledPayment3Basic",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBScheduledPayment3Detail",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBStandingOrder6",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBStandingOrder6Basic",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBStandingOrder6Detail",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBStatement2",
+      "description": "Provides further details on a statement resource.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBStatement2Basic",
+      "description": "Provides further details on a statement resource.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBStatement2Detail",
+      "description": "Provides further details on a statement resource.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBStatusReason",
+      "description": "",
+      "apis": [
+        "Account and Transaction API",
+        "Confirmation of Funds API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBSupplementaryData1",
+      "description": "Additional information that can not be captured in the structured fields and/or any other specific block.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBTransaction6",
+      "description": "Provides further details on an entry in the report.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBTransaction6Basic",
+      "description": "Provides further details on an entry in the report.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBTransaction6Detail",
+      "description": "Provides further details on an entry in the report.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBTransactionCardInstrument1",
+      "description": "Set of elements to describe the card instrument used in the transaction. <br />\nFor a full list of enumeration values refer to `OBInternalCardSchemeType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBTransactionCashBalance",
+      "description": "Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account after a transaction entry is applied to the account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBRisk2",
+      "description": "The Risk section is sent by the initiating party to the ASPSP. <br />\nIt is used to specify additional details for risk scoring for Account Info.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_Amount1_0",
+      "description": "Cap amount charged for a fee/charge",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OB_Amount1_1",
+      "description": "Every additional tranche of an overdraft balance to which an overdraft fee is applied",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OB_Amount1_2",
+      "description": "Amount charged for an overdraft fee/charge (where it is charged in terms of an amount rather than a rate)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OB_Amount1_3",
+      "description": "Fee Amount charged for a fee/charge (where it is charged in terms of an amount rather than a rate)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OB_Amount1_4",
+      "description": "Cap amount charged for a fee/charge (where it is charged in terms of an amount rather than a rate)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OB_CodeMnemonic",
+      "description": "The four letter Mnemonic used within an XML file to identify a code",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OB_FeeCategory1Code",
+      "description": "Categorisation of fees and charges into standard categories.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FCOT",
+        "FCRE",
+        "FCSV"
+      ]
+    },
+    {
+      "name": "OB_FeeFrequency1Code_0",
+      "description": "Frequency at which the overdraft charge is applied to the account",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FEAC",
+        "FEAO",
+        "FECP",
+        "FEDA",
+        "FEHO",
+        "FEI",
+        "FEMO",
+        "FEOA",
+        "FEOT",
+        "FEPC",
+        "FEPH",
+        "FEPO",
+        "FEPS",
+        "FEPT",
+        "FEPTA",
+        "FEPTP",
+        "FEQU",
+        "FESM",
+        "FEST",
+        "FEWE",
+        "FEYE"
+      ]
+    },
+    {
+      "name": "OB_FeeFrequency1Code_1",
+      "description": "How often is the overdraft fee/charge calculated for the account.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FEAC",
+        "FEAO",
+        "FECP",
+        "FEDA",
+        "FEHO",
+        "FEI",
+        "FEMO",
+        "FEOA",
+        "FEOT",
+        "FEPC",
+        "FEPH",
+        "FEPO",
+        "FEPS",
+        "FEPT",
+        "FEPTA",
+        "FEPTP",
+        "FEQU",
+        "FESM",
+        "FEST",
+        "FEWE",
+        "FEYE"
+      ]
+    },
+    {
+      "name": "OB_FeeFrequency1Code_2",
+      "description": "How frequently the fee/charge is applied to the account",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FEAC",
+        "FEAO",
+        "FECP",
+        "FEDA",
+        "FEHO",
+        "FEI",
+        "FEMO",
+        "FEOA",
+        "FEOT",
+        "FEPC",
+        "FEPH",
+        "FEPO",
+        "FEPS",
+        "FEPT",
+        "FEPTA",
+        "FEPTP",
+        "FEQU",
+        "FESM",
+        "FEST",
+        "FEWE",
+        "FEYE"
+      ]
+    },
+    {
+      "name": "OB_FeeFrequency1Code_3",
+      "description": "How frequently the fee/charge is calculated",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FEAC",
+        "FEAO",
+        "FECP",
+        "FEDA",
+        "FEHO",
+        "FEI",
+        "FEMO",
+        "FEOA",
+        "FEOT",
+        "FEPC",
+        "FEPH",
+        "FEPO",
+        "FEPS",
+        "FEPT",
+        "FEPTA",
+        "FEPTP",
+        "FEQU",
+        "FESM",
+        "FEST",
+        "FEWE",
+        "FEYE"
+      ]
+    },
+    {
+      "name": "OB_FeeFrequency1Code_4",
+      "description": "Period e.g. day, week, month etc. for which the fee/charge is capped",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FEAC",
+        "FEAO",
+        "FECP",
+        "FEDA",
+        "FEHO",
+        "FEI",
+        "FEMO",
+        "FEOA",
+        "FEOT",
+        "FEPC",
+        "FEPH",
+        "FEPO",
+        "FEPS",
+        "FEPT",
+        "FEPTA",
+        "FEPTP",
+        "FEQU",
+        "FESM",
+        "FEST",
+        "FEWE",
+        "FEYE"
+      ]
+    },
+    {
+      "name": "OB_FeeType1Code",
+      "description": "Fee/Charge Type",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FEPF",
+        "FTOT",
+        "FYAF",
+        "FYAM",
+        "FYAQ",
+        "FYCP",
+        "FYDB",
+        "FYMI",
+        "FYXX"
+      ]
+    },
+    {
+      "name": "OB_InterestCalculationMethod1Code",
+      "description": "Methods of calculating interest",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "ITCO",
+        "ITOT",
+        "ITSI"
+      ]
+    },
+    {
+      "name": "OB_InterestFixedVariableType1Code",
+      "description": "Type of interest rate, Fixed or Variable",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "INFI",
+        "INVA"
+      ]
+    },
+    {
+      "name": "OB_InterestRateType1Code_0",
+      "description": "Rate type for overdraft fee/charge (where it is charged in terms of a rate rather than an amount)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "INBB",
+        "INFR",
+        "INGR",
+        "INLR",
+        "INNE",
+        "INOT"
+      ]
+    },
+    {
+      "name": "OB_InterestRateType1Code_1",
+      "description": "Rate type for Fee/Charge (where it is charged in terms of a rate rather than an amount)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "INBB",
+        "INFR",
+        "INGR",
+        "INLR",
+        "INNE",
+        "INOT"
+      ]
+    },
+    {
+      "name": "OB_MinMaxType1Code",
+      "description": "Min Max type",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FMMN",
+        "FMMX"
+      ]
+    },
+    {
+      "name": "OB_OtherCodeType1_0",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OtherCodeType1_1",
+      "description": "Other application frequencies that are not available in the standard code list",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OtherCodeType1_2",
+      "description": "Other calculation frequency which is not available in the standard code set.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OtherCodeType1_3",
+      "description": "Other Fee type which is not available in the standard code set",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OtherCodeType1_4",
+      "description": "Other fee rate type code which is not available in the standard code set",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OtherCodeType1_5",
+      "description": "Other fee rate type which is not in the standard rate type list",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OtherCodeType1_6",
+      "description": "Other application frequencies not covered in the standard code list",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OtherCodeType1_7",
+      "description": "Other calculation frequency which is not available in standard code set.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OtherCodeType1_8",
+      "description": "Other fee rate type which is not available in the standard code set",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OtherFeeChargeDetailType",
+      "description": "Other Fee/charge type which is not available in the standard code set",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OB_OverdraftFeeType1Code",
+      "description": "Overdraft fee type",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "FBAO",
+        "FBAR",
+        "FBEB",
+        "FBIT",
+        "FBOR",
+        "FBOS",
+        "FBSC",
+        "FBTO",
+        "FBUB",
+        "FBUT",
+        "FTOT",
+        "FTUT"
+      ]
+    },
+    {
+      "name": "OB_Period1Code",
+      "description": "Period e.g. day, week, month etc. for which the fee/charge is capped",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "PACT",
+        "PDAY",
+        "PHYR",
+        "PMTH",
+        "PQTR",
+        "PWEK",
+        "PYER"
+      ]
+    },
+    {
+      "name": "OB_Rate1_0",
+      "description": "Rate charged for overdraft fee/charge (where it is charged in terms of a rate rather than an amount)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OB_Rate1_1",
+      "description": "Rate charged for Fee/Charge (where it is charged in terms of a rate rather than an amount)",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OpeningDate",
+      "description": "Date on which the account and related basic services are effectively operational for the account owner. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "PartyId",
+      "description": "A unique and immutable identifier used to identify the customer resource. This identifier has no meaning to the account owner.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "PartyNumber",
+      "description": "Number assigned by an agent to identify its customer.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "PhoneNumber_0",
+      "description": "Collection of information that identifies a phone number, as defined by telecom services.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "PhoneNumber_1",
+      "description": "Collection of information that identifies a mobile phone number, as defined by telecom services.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "PostBox",
+      "description": "Information that locates and identifies a box in a post office assigned to a person or organization, where letters for them are kept until called for.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "PostCode",
+      "description": "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "PreviousPaymentDateTime",
+      "description": "Date of most recent direct debit collection. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "ProprietaryBankTransactionCodeStructure1",
+      "description": "Set of elements to fully identify a proprietary bank transaction code.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "Rate",
+      "description": "Rate associated with the statement rate type.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Reference",
+      "description": "Unique reference, as assigned by the creditor, to unambiguously refer to the payment transaction.\nUsage: If available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the amount of money.\nIf the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Room",
+      "description": "Information that locates and identifies a room to form part of an address",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBExtendedProprietaryBankTransactionCode",
+      "description": "Additional proprietary bank transaction codes used by the ASPSP for the underlying transaction",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalBeneficiaryType1Code",
+      "description": "Specifies the Beneficiary Type.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Trusted",
+        "Ordinary"
+      ]
+    },
+    {
+      "name": "ScheduledPaymentDateTime",
+      "description": "The date on which the scheduled payment will be made. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "ScheduledPaymentId",
+      "description": "A unique and immutable identifier used to identify the scheduled payment resource. This identifier has no meaning to the account owner.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "SecondaryIdentification",
+      "description": "This is secondary identification of the account, as assigned by the account servicing institution. \nThis can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "StandingOrderId",
+      "description": "A unique and immutable identifier used to identify the standing order resource. This identifier has no meaning to the account owner.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "StartDateTime",
+      "description": "Date and time at which the statement period starts. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "StatementFrequencyAndFormat",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "array",
+      "enumValues": []
+    },
+    {
+      "name": "StatementId",
+      "description": "Unique identifier for the statement resource within a servicing institution. This identifier is both unique and immutable.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "StatementReference",
+      "description": "Unique reference for the statement. This reference may be optionally populated if available.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "StatusUpdateDateTime",
+      "description": "Date and time at which the resource status was updated. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "StreetName",
+      "description": "Name of a street or thoroughfare.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Time",
+      "description": "Time at which assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit transaction entry.\nUsage: If transaction entry status is pending and value date is present, then the value date refers to an expected/requested value date.\nFor transaction entries subject to availability/float and for which availability information is provided, the value date must not be used. In this case the availability component identifies the number of availability days. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\nT10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "TownName",
+      "description": "Name of a built-up area, with defined boundaries, and a local government.",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "TransactionId",
+      "description": "Unique identifier for the transaction within a servicing institution. This identifier is both unique and immutable.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "TransactionInformation",
+      "description": "Further details of the transaction. \nThis is the transaction narrative, which is unstructured text.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "TransactionReference",
+      "description": "Unique reference for the transaction. This reference is optionally populated, and may as an example be the FPID in the Faster Payments context.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "UnitNumber",
+      "description": "Number that identifies the unit of a specific address .",
+      "apis": [
+        "Account and Transaction API",
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Value",
+      "description": "Value associated with the statement value type.",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "ValueDateTime",
+      "description": "Date and time at which assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit transaction entry.\nUsage: If transaction entry status is pending and value date is present, then the value date refers to an expected/requested value date.\nFor transaction entries subject to availability/float and for which availability information is provided, the value date must not be used. In this case the availability component identifies the number of availability days. All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Model",
+      "description": "",
+      "apis": [
+        "Account and Transaction API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBFundsConfirmation1",
+      "description": "",
+      "apis": [
+        "Confirmation of Funds API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBFundsConfirmationConsent1",
+      "description": "",
+      "apis": [
+        "Confirmation of Funds API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBFundsConfirmationConsentResponse1",
+      "description": "",
+      "apis": [
+        "Confirmation of Funds API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBFundsConfirmationResponse1",
+      "description": "",
+      "apis": [
+        "Confirmation of Funds API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBEvent1",
+      "description": "Events.",
+      "apis": [
+        "Event Notification API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBEventLink1",
+      "description": "Resource links to other available versions of the resource.",
+      "apis": [
+        "Event Notification API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBEventNotification1",
+      "description": "The resource-update event.",
+      "apis": [
+        "Event Notification API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBEventResourceUpdate1",
+      "description": "Resource-Update Event.",
+      "apis": [
+        "Event Notification API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBEventSubject1",
+      "description": "The resource-update event.",
+      "apis": [
+        "Event Notification API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBEventSubscription1",
+      "description": "",
+      "apis": [
+        "Events API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBEventSubscriptionResponse1",
+      "description": "",
+      "apis": [
+        "Events API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBEventSubscriptionsResponse1",
+      "description": "",
+      "apis": [
+        "Events API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "Version",
+      "description": "Version for the event notification.",
+      "apis": [
+        "Events API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBEventPolling1",
+      "description": "",
+      "apis": [
+        "Events API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBEventPollingResponse1",
+      "description": "",
+      "apis": [
+        "Events API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBDomesticRefundAccount1",
+      "description": "Unambiguous identification of the refund account to which a refund will be made as a result of the transaction.",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "ActiveOrHistoricCurrencyCode",
+      "description": "A code allocated to a currency by a Maintenance Agency under an international identification scheme, as described in the latest edition of the international standard ISO 4217 \"Codes for the representation of currencies and funds\".",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Department",
+      "description": "Identification of a division of a large organisation or building.",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "Name",
+      "description": "Name by which an agent is known and which is usually used to identify that agent.",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBActiveOrHistoricCurrencyAndAmount",
+      "description": "Amount of money associated with the charge type.",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBAddressTypeCode",
+      "description": "Identifies the nature of the postal address.",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Business",
+        "Correspondence",
+        "DeliveryTo",
+        "MailTo",
+        "POBox",
+        "Postal",
+        "Residential",
+        "Statement"
+      ]
+    },
+    {
+      "name": "OBInternalChargeBearerType1Code",
+      "description": "Specifies which party/parties will bear the charges associated with the processing of the payment transaction. For a full list of values refer to `OBInternalChargeBearerType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "BorneByCreditor",
+        "BorneByDebtor",
+        "FollowingServiceLevel",
+        "Shared"
+      ]
+    },
+    {
+      "name": "OBCashAccountCreditor3",
+      "description": "",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBCashAccountDebtor4",
+      "description": "^ Only included in the response if `Data. ReadRefundAccount` is set to `Yes` in the consent.",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalExtendedAccountType1Code",
+      "description": "Specifies the extended type of account.",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Business",
+        "BusinessSavingsAccount",
+        "Charity",
+        "Collection",
+        "Corporate",
+        "Ewallet",
+        "Government",
+        "Investment",
+        "ISA",
+        "JointPersonal",
+        "Pension",
+        "Personal",
+        "PersonalSavingsAccount",
+        "Premier",
+        "Wealth"
+      ]
+    },
+    {
+      "name": "OBInternalLocalInstrument1Code",
+      "description": "User community specific instrument.\nUsage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level. For a full list of values refer to `OBInternalLocalInstrument1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalPaymentChargeType1Code",
+      "description": "Charge type, in a coded form. For a full list of values refer to `OBInternalPaymentChargeType1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "ExternalPurpose1Code",
+      "description": "This is a partial list, For a full list see `ExternalPurpose1Code` [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "BKDF",
+        "BKFE",
+        "BKFM",
+        "BKIP",
+        "BKPP",
+        "CBLK",
+        "CDCB",
+        "CDCD",
+        "CDCS",
+        "CDDP",
+        "CDOC",
+        "CDQC",
+        "ETUP",
+        "FCOL",
+        "MTUP",
+        "ACCT",
+        "CASH",
+        "COLL",
+        "CSDB",
+        "DEPT",
+        "INTC",
+        "INTP",
+        "LIMA",
+        "NETT",
+        "BFWD",
+        "CCIR",
+        "CCPC",
+        "CCPM",
+        "CCSM",
+        "CRDS",
+        "CRPR",
+        "CRSP",
+        "CRTL",
+        "EQPT",
+        "EQUS",
+        "EXPT",
+        "EXTD",
+        "FIXI",
+        "FWBC",
+        "FWCC",
+        "FWSB",
+        "FWSC",
+        "MARG",
+        "MBSB",
+        "MBSC",
+        "MGCC",
+        "MGSC",
+        "OCCC",
+        "OPBC",
+        "OPCC",
+        "OPSB",
+        "OPSC",
+        "OPTN",
+        "OTCD",
+        "REPO",
+        "RPBC",
+        "RPCC",
+        "RPSB",
+        "RPSC",
+        "RVPO",
+        "SBSC",
+        "SCIE",
+        "SCIR",
+        "SCRP",
+        "SHBC",
+        "SHCC",
+        "SHSL",
+        "SLEB",
+        "SLOA",
+        "SWBC",
+        "SWCC",
+        "SWPT",
+        "SWSB",
+        "SWSC",
+        "TBAS",
+        "TBBC",
+        "TBCC",
+        "TRCP",
+        "AGRT",
+        "AREN",
+        "BEXP",
+        "BOCE",
+        "COMC",
+        "CPYR",
+        "GDDS",
+        "GDSV",
+        "GSCB",
+        "LICF",
+        "MP2B",
+        "POPE",
+        "ROYA",
+        "SCVE",
+        "SERV",
+        "SUBS",
+        "SUPP",
+        "TRAD",
+        "CHAR",
+        "COMT",
+        "MP2P",
+        "ECPG",
+        "ECPR",
+        "ECPU",
+        "EPAY",
+        "CLPR",
+        "COMP",
+        "DBTC",
+        "GOVI",
+        "HLRP",
+        "HLST",
+        "INPC",
+        "INPR",
+        "INSC",
+        "INSU",
+        "INTE",
+        "LBRI",
+        "LIFI",
+        "LOAN",
+        "LOAR",
+        "PENO",
+        "PPTI",
+        "RELG",
+        "RINP",
+        "TRFD",
+        "FORW",
+        "FXNT",
+        "ADMG",
+        "ADVA",
+        "BCDM",
+        "BCFG",
+        "BLDM",
+        "BNET",
+        "CBFF",
+        "CBFR",
+        "CCRD",
+        "CDBL",
+        "CFEE",
+        "CGDD",
+        "CORT",
+        "COST",
+        "CPKC",
+        "DCRD",
+        "DSMT",
+        "DVPM",
+        "EDUC",
+        "FACT",
+        "FAND",
+        "FCPM",
+        "FEES",
+        "GIFT",
+        "GOVT",
+        "ICCP",
+        "IDCP",
+        "IHRP",
+        "INSM",
+        "IVPT",
+        "MCDM",
+        "MCFG",
+        "MSVC",
+        "NOWS",
+        "OCDM",
+        "OCFG",
+        "OFEE",
+        "OTHR",
+        "PADD",
+        "PTSP",
+        "RCKE",
+        "RCPT",
+        "REBT",
+        "REFU",
+        "RENT",
+        "REOD",
+        "RIMB",
+        "RPNT",
+        "RRBN",
+        "RRCT",
+        "RRTP",
+        "RVPM",
+        "SLPI",
+        "SPLT",
+        "STDY",
+        "TBAN",
+        "TBIL",
+        "TCSC",
+        "TELI",
+        "TMPG",
+        "TPRI",
+        "TPRP",
+        "TRNC",
+        "TRVC",
+        "WEBI",
+        "IPAY",
+        "IPCA",
+        "IPDO",
+        "IPEA",
+        "IPEC",
+        "IPEW",
+        "IPPS",
+        "IPRT",
+        "IPU2",
+        "IPUW",
+        "ANNI",
+        "CAFI",
+        "CFDI",
+        "CMDT",
+        "DERI",
+        "DIVD",
+        "FREX",
+        "HEDG",
+        "INVS",
+        "PRME",
+        "SAVG",
+        "SECU",
+        "SEPI",
+        "TREA",
+        "UNIT",
+        "FNET",
+        "FUTR",
+        "ANTS",
+        "CVCF",
+        "DMEQ",
+        "DNTS",
+        "HLTC",
+        "HLTI",
+        "HSPC",
+        "ICRF",
+        "LTCF",
+        "MAFC",
+        "MARF",
+        "MDCS",
+        "VIEW",
+        "CDEP",
+        "SWFP",
+        "SWPP",
+        "SWRS",
+        "SWUF",
+        "ADCS",
+        "AEMP",
+        "ALLW",
+        "ALMY",
+        "BBSC",
+        "BECH",
+        "BENE",
+        "BONU",
+        "CCHD",
+        "COMM",
+        "CSLP",
+        "GFRP",
+        "GVEA",
+        "GVEB",
+        "GVEC",
+        "GVED",
+        "GWLT",
+        "HREC",
+        "PAYR",
+        "PEFC",
+        "PENS",
+        "PRCP",
+        "RHBS",
+        "SALA",
+        "SPSP",
+        "SSBE",
+        "LBIN",
+        "LCOL",
+        "LFEE",
+        "LMEQ",
+        "LMFI",
+        "LMRK",
+        "LREB",
+        "LREV",
+        "LSFL",
+        "ESTX",
+        "FWLV",
+        "GSTX",
+        "HSTX",
+        "INTX",
+        "NITX",
+        "PTXP",
+        "RDTX",
+        "TAXS",
+        "VATX",
+        "WHLD",
+        "TAXR",
+        "B112",
+        "BR12",
+        "TLRF",
+        "TLRR",
+        "AIRB",
+        "BUSB",
+        "FERB",
+        "RLWY",
+        "TRPT",
+        "CBTV",
+        "ELEC",
+        "ENRG",
+        "GASB",
+        "NWCH",
+        "NWCM",
+        "OTLC",
+        "PHON",
+        "UBIL",
+        "WTER",
+        "BOND",
+        "CABD",
+        "CAEQ",
+        "CBCR",
+        "DBCR",
+        "DICL",
+        "EQTS",
+        "FLCR",
+        "EFTC",
+        "EFTD",
+        "MOMA",
+        "RAPI",
+        "GAMB",
+        "LOTT",
+        "AMEX",
+        "SASW",
+        "AUCO",
+        "PCOM",
+        "PDEP",
+        "PLDS",
+        "PLRF",
+        "GAFA",
+        "GAHO",
+        "CPEN",
+        "DEPD",
+        "RETL",
+        "DEBT",
+        "CRYP"
+      ]
+    },
+    {
+      "name": "OBPaymentStatusReason",
+      "description": "",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBRegulatoryAuthority2",
+      "description": "Entity requiring the regulatory reporting information. ",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBRegulatoryReporting1",
+      "description": "Information needed due to regulatory and statutory requirements",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBRisk1",
+      "description": "The Risk section is sent by the initiating party to the ASPSP.\nIt is used to specify additional details for risk scoring for Payments.",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBSCASupportData1",
+      "description": "Supporting Data provided by TPP, when requesting SCA Exemption.",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBStructuredRegulatoryReporting3",
+      "description": "Set of elements used to provide details on the regulatory reporting information.",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomestic2",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticConsent4",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticConsentResponse5",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalConsentStatus2Code",
+      "description": "Specifies the status of consent resource in code form. For a full list of values refer to `OBInternalConsentStatus2Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "AWAU",
+        "RJCT",
+        "AUTH",
+        "COND"
+      ]
+    },
+    {
+      "name": "OBWriteDomesticResponse5",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticScheduled2",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticScheduledConsent4",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticScheduledConsentResponse5",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticScheduledResponse5",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticStandingOrder3",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticStandingOrderConsent5",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticStandingOrderConsentResponse6",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteDomesticStandingOrderResponse6",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteFile2",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteFileConsent3",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteFileConsentResponse4",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBInternalConsentStatus3Code",
+      "description": "Specifies the status of consent resource in code form.",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "AWAU",
+        "AWUP",
+        "RJCT",
+        "AUTH",
+        "COND"
+      ]
+    },
+    {
+      "name": "OBWriteFileResponse3",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteFundsConfirmationResponse1",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternational3",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalConsent5",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalConsentResponse6",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalResponse5",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalScheduled3",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalScheduledConsent5",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalScheduledConsentResponse6",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalScheduledResponse6",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalStandingOrder4",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalStandingOrderConsent6",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalStandingOrderConsentResponse7",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWriteInternationalStandingOrderResponse7",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWritePaymentDetailsResponse1",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBWritePaymentDetails1",
+      "description": "",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "SubDepartment",
+      "description": "Identification of a sub-division of a large organisation or building.",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "ExternalPaymentTransactionStatus1Code",
+      "description": "The current status of the payment resource.\n\nFor a full list of values see `ExternalPaymentTransactionStatus1Code` in *OB_Internal_CodeSet* \n[here](https://github.com/OpenBankingUK/External_Internal_CodeSets)\n",
+      "apis": [
+        "Payment Initiation API",
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "CANC",
+        "RCVD",
+        "ACTC",
+        "PATC",
+        "PDNG",
+        "RJCT",
+        "INFA",
+        "INCO",
+        "ACCP",
+        "ACFC",
+        "ACSP",
+        "ACWC",
+        "ACSC",
+        "BLCK",
+        "ACCC",
+        "ACWP"
+      ]
+    },
+    {
+      "name": "ExternalPaymentTransactionStatus2Code",
+      "description": "Specifies the status of the payment order resource. \n\nFor a full list of values see `ExternalPaymentTransactionStatus2Code` in *OB_Internal_CodeSet* \n[here](https://github.com/OpenBankingUK/External_Internal_CodeSets)\n",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "CANC",
+        "RCVD",
+        "PDNG",
+        "ACTC",
+        "PATC",
+        "ACCP",
+        "ACFC",
+        "ACSP",
+        "ACWC",
+        "ACSC",
+        "BLCK",
+        "ACCC",
+        "ACWP",
+        "RJCT"
+      ]
+    },
+    {
+      "name": "ExternalPaymentTransactionStatus3Code",
+      "description": "Specifies the status of the payment information group.\n\nFor a full list of values refer to `ExternalPaymentTransactionStatus3Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets)\n",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "RCVD",
+        "PDNG",
+        "ACTC",
+        "PATC",
+        "ACCP",
+        "ACFC",
+        "ACSP",
+        "ACWC",
+        "ACSC",
+        "BLCK",
+        "ACCC",
+        "ACWP",
+        "RJCT"
+      ]
+    },
+    {
+      "name": "ExternalPaymentTransactionStatus4Code",
+      "description": "Specifies the status of the payment order resource.\n\nSee `ExternalPaymentTransactionStatus4Code` in *OB_Internal_CodeSet* \n[here](https://github.com/OpenBankingUK/External_Internal_CodeSets) for more information.\n",
+      "apis": [
+        "Payment Initiation API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "PDNG",
+        "INFA",
+        "INCO"
+      ]
+    },
+    {
+      "name": "OBDomesticVRPConsentResponse",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBDomesticVRPConsentRequest",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBDomesticVRPControlParameters",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBDomesticVRPInitiation",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBCashAccountDebtorWithName",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBBranchAndFinancialInstitutionIdentification6",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBDomesticVRPRequest",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBDomesticVRPResponse",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBDomesticVRPDetails",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBVRPFundsConfirmationRequest",
+      "description": "The OBVRPFundsConfirmationRequest object must be used to request funds availability for a specific amount in the Debtor Account included in the VRP consents.",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBVRPFundsConfirmationResponse",
+      "description": "The confirmation of funds response contains the result of a funds availability check.",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBPAFundsAvailableResult1",
+      "description": "Availability result, clearly indicating the availability of funds given the Amount in the request.",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBCharge2",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBExternalStatus2Code",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "AUTH",
+        "AWAU",
+        "RJCT"
+      ]
+    },
+    {
+      "name": "OBDomesticVRPInstruction",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBExternalCreditorReferenceType1Code",
+      "description": "Specifies the type of creditor reference as published in an external creditor reference type code set.\r\nExternal code sets can be downloaded from www.iso20022.org.\n*`DISP`-Document is a dispatch advice.\n*`FXDR`-Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers.\n*`PUOR`-Document is a purchase order.\n*`RPIN`-Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario.\n*`RADM`-Document is a remittance advice sent separately from the current transaction.\n*`SCOR`-Document is a structured communication reference provided by the creditor to identify the referred transaction.",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "DISP",
+        "FXDR",
+        "PUOR",
+        "RPIN",
+        "RADM",
+        "SCOR"
+      ]
+    },
+    {
+      "name": "OBVRPRemittanceInformation",
+      "description": "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "object",
+      "enumValues": []
+    },
+    {
+      "name": "OBExternalAccountType1Code",
+      "description": "Specifies the type of account (personal or business).",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "Business",
+        "Personal"
+      ]
+    },
+    {
+      "name": "OBVRPStatusReasonCode",
+      "description": "Reason Code provided for the status of a VRP. To be documented in the Developer Portal.\n",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBVRPConsentType",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBVRPAuthenticationMethods",
+      "description": "",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": []
+    },
+    {
+      "name": "OBVRPInteractionTypes",
+      "description": "Indicates interaction type, currently if customer is present or not present. If not provided the default is `OffSession` (customer is not present) when the individual VRP payment is made. ",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "InSession",
+        "OffSession"
+      ]
+    },
+    {
+      "name": "ExternalPaymentTransactionStatus5Code",
+      "description": "Specifies the status of the payment information group. \n\nFor a full list of values refer to `ExternalPaymentTransactionStatus5Code` in *OB_Internal_CodeSet* \n[here](https://github.com/OpenBankingUK/External_Internal_CodeSets).\n",
+      "apis": [
+        "Variable Recurring Payments API"
+      ],
+      "type": "string",
+      "enumValues": [
+        "RCVD",
+        "PDNG",
+        "ACTC",
+        "ACCP",
+        "ACFC",
+        "ACSP",
+        "ACWC",
+        "ACSC",
+        "BLCK",
+        "ACCC",
+        "ACWP",
+        "RJCT"
+      ]
+    }
+  ]
+}

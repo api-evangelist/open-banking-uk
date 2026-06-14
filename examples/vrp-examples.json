@@ -1,0 +1,135 @@
+{
+  "title": "OBL VRP Profile",
+  "version": "4.0.1",
+  "source": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/vrp-openapi.yaml",
+  "description": "Illustrative request and response examples for the UK Open Banking Variable Recurring Payments (VRP) API v4.0.1",
+  "examples": [
+    {
+      "operationId": "CreateDomesticVRPConsents",
+      "path": "/domestic-vrp-consents",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/json",
+      "description": "Create a Variable Recurring Payment consent with spending controls",
+      "example": {
+        "Data": {
+          "ControlParameters": {
+            "PSUAuthenticationMethods": ["UK.OBIE.SCA"],
+            "ValidFromDateTime": "2026-06-13T00:00:00+00:00",
+            "ValidToDateTime": "2027-06-13T00:00:00+00:00",
+            "MaximumIndividualAmount": {
+              "Amount": "100.00",
+              "Currency": "GBP"
+            },
+            "PeriodicLimits": [
+              {
+                "Amount": "1000.00",
+                "Currency": "GBP",
+                "PeriodAlignment": "Calendar",
+                "PeriodType": "Month"
+              }
+            ]
+          },
+          "Initiation": {
+            "CreditorAccount": {
+              "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+              "Identification": "70000170000001",
+              "Name": "Amy Knight"
+            }
+          }
+        },
+        "Risk": {
+          "PaymentContextCode": "PartyToParty"
+        }
+      }
+    },
+    {
+      "operationId": "CreateDomesticVRPConsents",
+      "path": "/domestic-vrp-consents",
+      "method": "POST",
+      "statusCode": "201",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Successful VRP consent creation",
+      "example": {
+        "Data": {
+          "ConsentId": "vrp-con-001",
+          "CreationDateTime": "2026-06-13T10:00:00+00:00",
+          "Status": "AwaitingAuthorisation",
+          "StatusUpdateDateTime": "2026-06-13T10:00:00+00:00",
+          "ControlParameters": {
+            "PSUAuthenticationMethods": ["UK.OBIE.SCA"],
+            "ValidFromDateTime": "2026-06-13T00:00:00+00:00",
+            "ValidToDateTime": "2027-06-13T00:00:00+00:00",
+            "MaximumIndividualAmount": {
+              "Amount": "100.00",
+              "Currency": "GBP"
+            },
+            "PeriodicLimits": [
+              {
+                "Amount": "1000.00",
+                "Currency": "GBP",
+                "PeriodAlignment": "Calendar",
+                "PeriodType": "Month"
+              }
+            ]
+          },
+          "Initiation": {
+            "CreditorAccount": {
+              "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+              "Identification": "70000170000001",
+              "Name": "Amy Knight"
+            }
+          }
+        },
+        "Risk": {
+          "PaymentContextCode": "PartyToParty"
+        },
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/pisp/domestic-vrp-consents/vrp-con-001"
+        },
+        "Meta": {
+          "TotalPages": 1
+        }
+      }
+    },
+    {
+      "operationId": "CreateDomesticVrps",
+      "path": "/domestic-vrps",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/json",
+      "description": "Initiate a single VRP payment under an authorised consent",
+      "example": {
+        "Data": {
+          "ConsentId": "vrp-con-001",
+          "PSUAuthenticationMethod": "UK.OBIE.SCA",
+          "VRPType": "UK.OBIE.VRPType.Sweeping",
+          "Initiation": {
+            "CreditorAccount": {
+              "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+              "Identification": "70000170000001",
+              "Name": "Amy Knight"
+            }
+          },
+          "Instruction": {
+            "InstructionIdentification": "VRP-20260613-001",
+            "EndToEndIdentification": "e2e-vrp-001",
+            "InstructedAmount": {
+              "Amount": "55.00",
+              "Currency": "GBP"
+            },
+            "CreditorAccount": {
+              "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+              "Identification": "70000170000001",
+              "Name": "Amy Knight"
+            }
+          }
+        },
+        "Risk": {
+          "PaymentContextCode": "PartyToParty"
+        }
+      }
+    }
+  ]
+}

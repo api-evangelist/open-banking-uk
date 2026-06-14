@@ -1,0 +1,180 @@
+{
+  "title": "Account and Transaction API Specification",
+  "version": "4.0.1",
+  "source": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/account-info-openapi.yaml",
+  "description": "Illustrative request and response examples for the UK Open Banking Account and Transaction API v4.0.1",
+  "examples": [
+    {
+      "operationId": "CreateAccountAccessConsents",
+      "path": "/account-access-consents",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/json",
+      "description": "Create an Account Access Consent requesting read access to accounts, balances, and transactions",
+      "example": {
+        "Data": {
+          "Permissions": [
+            "ReadAccountsDetail",
+            "ReadBalances",
+            "ReadTransactionsDetail",
+            "ReadTransactionsCredits",
+            "ReadTransactionsDebits"
+          ],
+          "ExpirationDateTime": "2026-12-31T23:59:59+00:00",
+          "TransactionFromDateTime": "2026-01-01T00:00:00+00:00",
+          "TransactionToDateTime": "2026-12-31T23:59:59+00:00"
+        },
+        "Risk": {}
+      }
+    },
+    {
+      "operationId": "CreateAccountAccessConsents",
+      "path": "/account-access-consents",
+      "method": "POST",
+      "statusCode": "201",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Successful creation of an Account Access Consent",
+      "example": {
+        "Data": {
+          "ConsentId": "urn:alphabank:intent:58923",
+          "CreationDateTime": "2026-06-13T10:00:00+00:00",
+          "Status": "AwaitingAuthorisation",
+          "StatusUpdateDateTime": "2026-06-13T10:00:00+00:00",
+          "Permissions": [
+            "ReadAccountsDetail",
+            "ReadBalances",
+            "ReadTransactionsDetail",
+            "ReadTransactionsCredits",
+            "ReadTransactionsDebits"
+          ],
+          "ExpirationDateTime": "2026-12-31T23:59:59+00:00",
+          "TransactionFromDateTime": "2026-01-01T00:00:00+00:00",
+          "TransactionToDateTime": "2026-12-31T23:59:59+00:00"
+        },
+        "Risk": {},
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/aisp/account-access-consents/urn:alphabank:intent:58923"
+        },
+        "Meta": {
+          "TotalPages": 1
+        }
+      }
+    },
+    {
+      "operationId": "GetAccounts",
+      "path": "/accounts",
+      "method": "GET",
+      "statusCode": "200",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "List of accounts returned after successful PSU authorisation",
+      "example": {
+        "Data": {
+          "Account": [
+            {
+              "AccountId": "22289",
+              "Status": "Enabled",
+              "StatusUpdateDateTime": "2026-01-01T06:06:06+00:00",
+              "Currency": "GBP",
+              "AccountType": "Personal",
+              "AccountSubType": "CurrentAccount",
+              "Description": "Household",
+              "Nickname": "Bills",
+              "OpeningDate": "2010-03-15",
+              "Account": [
+                {
+                  "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+                  "Identification": "80200110203345",
+                  "Name": "Mr Kevin",
+                  "SecondaryIdentification": "00021"
+                }
+              ]
+            }
+          ]
+        },
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/aisp/accounts"
+        },
+        "Meta": {
+          "TotalPages": 1
+        }
+      }
+    },
+    {
+      "operationId": "GetAccountsAccountIdBalances",
+      "path": "/accounts/{AccountId}/balances",
+      "method": "GET",
+      "statusCode": "200",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Account balance information",
+      "example": {
+        "Data": {
+          "Balance": [
+            {
+              "AccountId": "22289",
+              "Amount": {
+                "Amount": "1230.00",
+                "Currency": "GBP"
+              },
+              "CreditDebitIndicator": "Credit",
+              "Type": "InterimAvailable",
+              "DateTime": "2026-06-13T09:00:00+00:00"
+            }
+          ]
+        },
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/aisp/accounts/22289/balances"
+        },
+        "Meta": {
+          "TotalPages": 1
+        }
+      }
+    },
+    {
+      "operationId": "GetAccountsAccountIdTransactions",
+      "path": "/accounts/{AccountId}/transactions",
+      "method": "GET",
+      "statusCode": "200",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Account transactions list",
+      "example": {
+        "Data": {
+          "Transaction": [
+            {
+              "AccountId": "22289",
+              "TransactionId": "123",
+              "CreditDebitIndicator": "Credit",
+              "Status": "Booked",
+              "BookingDateTime": "2026-06-10T16:13:00+00:00",
+              "Amount": {
+                "Amount": "10.00",
+                "Currency": "GBP"
+              },
+              "TransactionInformation": "Direct Credit",
+              "BankTransactionCode": {
+                "Code": "ReceivedCreditTransfer",
+                "SubCode": "DomesticCreditTransfer"
+              },
+              "DebtorAccount": {
+                "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+                "Identification": "30949330000010",
+                "Name": "Mr Tee"
+              }
+            }
+          ]
+        },
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/aisp/accounts/22289/transactions"
+        },
+        "Meta": {
+          "TotalPages": 1,
+          "FirstAvailableDateTime": "2026-01-01T00:00:00+00:00",
+          "LastAvailableDateTime": "2026-06-13T00:00:00+00:00"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "title": "Payment Initiation API",
+  "version": "4.0.1",
+  "source": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/payment-initiation-openapi.yaml",
+  "description": "Illustrative request and response examples for the UK Open Banking Payment Initiation API v4.0.1",
+  "examples": [
+    {
+      "operationId": "CreateDomesticPaymentConsents",
+      "path": "/domestic-payment-consents",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/json",
+      "description": "Create a domestic payment consent",
+      "example": {
+        "Data": {
+          "Initiation": {
+            "InstructionIdentification": "ACME412",
+            "EndToEndIdentification": "FRESCO.21302.GFX.20",
+            "InstructedAmount": {
+              "Amount": "165.88",
+              "Currency": "GBP"
+            },
+            "CreditorAccount": {
+              "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+              "Identification": "08080021325698",
+              "Name": "ACME Inc",
+              "SecondaryIdentification": "0002"
+            },
+            "RemittanceInformation": {
+              "Reference": "FRESCO-101",
+              "Unstructured": "Internal ops code 5120101"
+            }
+          }
+        },
+        "Risk": {
+          "PaymentContextCode": "EcommerceGoods",
+          "MerchantCategoryCode": "5967",
+          "MerchantCustomerIdentification": "053598653254"
+        }
+      }
+    },
+    {
+      "operationId": "CreateDomesticPaymentConsents",
+      "path": "/domestic-payment-consents",
+      "method": "POST",
+      "statusCode": "201",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Successful creation of a domestic payment consent",
+      "example": {
+        "Data": {
+          "ConsentId": "58923",
+          "CreationDateTime": "2026-06-13T10:00:00+00:00",
+          "Status": "AwaitingAuthorisation",
+          "StatusUpdateDateTime": "2026-06-13T10:00:00+00:00",
+          "CutOffDateTime": "2026-06-13T15:30:00+00:00",
+          "ExpectedExecutionDateTime": "2026-06-13T16:00:00+00:00",
+          "ExpectedSettlementDateTime": "2026-06-14T09:00:00+00:00",
+          "Initiation": {
+            "InstructionIdentification": "ACME412",
+            "EndToEndIdentification": "FRESCO.21302.GFX.20",
+            "InstructedAmount": {
+              "Amount": "165.88",
+              "Currency": "GBP"
+            },
+            "CreditorAccount": {
+              "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+              "Identification": "08080021325698",
+              "Name": "ACME Inc",
+              "SecondaryIdentification": "0002"
+            },
+            "RemittanceInformation": {
+              "Reference": "FRESCO-101",
+              "Unstructured": "Internal ops code 5120101"
+            }
+          }
+        },
+        "Risk": {
+          "PaymentContextCode": "EcommerceGoods",
+          "MerchantCategoryCode": "5967",
+          "MerchantCustomerIdentification": "053598653254"
+        },
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/pisp/domestic-payment-consents/58923"
+        },
+        "Meta": {
+          "TotalPages": 1
+        }
+      }
+    },
+    {
+      "operationId": "CreateDomesticPayments",
+      "path": "/domestic-payments",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/json",
+      "description": "Submit a domestic payment after consent authorisation",
+      "example": {
+        "Data": {
+          "ConsentId": "58923",
+          "Initiation": {
+            "InstructionIdentification": "ACME412",
+            "EndToEndIdentification": "FRESCO.21302.GFX.20",
+            "InstructedAmount": {
+              "Amount": "165.88",
+              "Currency": "GBP"
+            },
+            "CreditorAccount": {
+              "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+              "Identification": "08080021325698",
+              "Name": "ACME Inc",
+              "SecondaryIdentification": "0002"
+            },
+            "RemittanceInformation": {
+              "Reference": "FRESCO-101",
+              "Unstructured": "Internal ops code 5120101"
+            }
+          }
+        },
+        "Risk": {
+          "PaymentContextCode": "EcommerceGoods",
+          "MerchantCategoryCode": "5967",
+          "MerchantCustomerIdentification": "053598653254"
+        }
+      }
+    },
+    {
+      "operationId": "CreateDomesticPayments",
+      "path": "/domestic-payments",
+      "method": "POST",
+      "statusCode": "201",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Successful domestic payment submission",
+      "example": {
+        "Data": {
+          "DomesticPaymentId": "58923-001",
+          "ConsentId": "58923",
+          "CreationDateTime": "2026-06-13T10:05:00+00:00",
+          "Status": "AcceptedSettlementInProcess",
+          "StatusUpdateDateTime": "2026-06-13T10:05:00+00:00",
+          "ExpectedExecutionDateTime": "2026-06-13T16:00:00+00:00",
+          "ExpectedSettlementDateTime": "2026-06-14T09:00:00+00:00",
+          "Initiation": {
+            "InstructionIdentification": "ACME412",
+            "EndToEndIdentification": "FRESCO.21302.GFX.20",
+            "InstructedAmount": {
+              "Amount": "165.88",
+              "Currency": "GBP"
+            },
+            "CreditorAccount": {
+              "SchemeName": "UK.OBIE.SortCodeAccountNumber",
+              "Identification": "08080021325698",
+              "Name": "ACME Inc",
+              "SecondaryIdentification": "0002"
+            },
+            "RemittanceInformation": {
+              "Reference": "FRESCO-101",
+              "Unstructured": "Internal ops code 5120101"
+            }
+          },
+          "MultiAuthorisation": {
+            "Status": "Authorised",
+            "NumberRequired": 2,
+            "NumberReceived": 2
+          }
+        },
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/pisp/domestic-payments/58923-001"
+        },
+        "Meta": {
+          "TotalPages": 1
+        }
+      }
+    }
+  ]
+}

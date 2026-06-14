@@ -1,0 +1,80 @@
+{
+  "title": "Events API Specification - ASPSP Endpoints",
+  "version": "4.0.1",
+  "source": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/events-openapi.yaml",
+  "description": "Illustrative request and response examples for the UK Open Banking Events API (ASPSP Endpoints) v4.0.1",
+  "examples": [
+    {
+      "operationId": "CreateEvents",
+      "path": "/events",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/json",
+      "description": "Poll for security events (real-time event notifications) from the ASPSP",
+      "example": {
+        "returnImmediately": true,
+        "maxEvents": 10,
+        "sets": {}
+      }
+    },
+    {
+      "operationId": "CreateEvents",
+      "path": "/events",
+      "method": "POST",
+      "statusCode": "200",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Response containing security event tokens",
+      "example": {
+        "sets": {
+          "eyJhbGciOiJSUzI1NiIsInR5cCI6InNlY2V0K2p3dCJ9": "eyJhbGciOiJSUzI1NiIsInR5cCI6InNlY2V0K2p3dCIsImtpZCI6IjEifQ"
+        },
+        "moreAvailable": false
+      }
+    },
+    {
+      "operationId": "CreateEventSubscriptions",
+      "path": "/event-subscriptions",
+      "method": "POST",
+      "type": "request",
+      "mediaType": "application/json",
+      "description": "Register a callback URL to receive real-time event notifications",
+      "example": {
+        "Data": {
+          "CallbackUrl": "https://tpp.example.com/event-notifications",
+          "Version": "4.0.1",
+          "EventTypes": [
+            "urn:uk:org:openbanking:events:resource-update",
+            "urn:uk:org:openbanking:events:consent-authorization-revoked"
+          ]
+        }
+      }
+    },
+    {
+      "operationId": "CreateEventSubscriptions",
+      "path": "/event-subscriptions",
+      "method": "POST",
+      "statusCode": "201",
+      "type": "response",
+      "mediaType": "application/json",
+      "description": "Successful event subscription registration",
+      "example": {
+        "Data": {
+          "EventSubscriptionId": "sub-001",
+          "CallbackUrl": "https://tpp.example.com/event-notifications",
+          "Version": "4.0.1",
+          "EventTypes": [
+            "urn:uk:org:openbanking:events:resource-update",
+            "urn:uk:org:openbanking:events:consent-authorization-revoked"
+          ]
+        },
+        "Links": {
+          "Self": "https://api.alphabank.com/open-banking/v4.0/event-subscriptions/sub-001"
+        },
+        "Meta": {
+          "TotalPages": 1
+        }
+      }
+    }
+  ]
+}

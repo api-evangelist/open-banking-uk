@@ -1,0 +1,171 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "schema": "https://schema.org/",
+    "dcat": "https://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ob": "https://standards.openbanking.org.uk/vocab/",
+    "fibo": "https://spec.edmcouncil.org/fibo/ontology/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "schema:DataCatalog",
+  "@id": "https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/apis.yml",
+  "schema:name": "UK Open Banking",
+  "schema:description": "UK Open Banking standard with REST APIs for account and transaction data, payment initiation, variable recurring payments, and confirmation of funds for regulated financial services. Governed by the Open Banking Implementation Entity (OBIE) and overseen by the FCA and PSR under PSD2 and the CMA Order.",
+  "schema:url": "https://www.openbanking.org.uk/",
+  "schema:license": "https://www.openbanking.org.uk/terms/",
+  "schema:keywords": [
+    "Open Banking",
+    "Financial Services",
+    "Payments",
+    "Account Information",
+    "PSD2",
+    "UK",
+    "Banking",
+    "Fintech",
+    "Regulated"
+  ],
+  "schema:publisher": {
+    "@type": "schema:Organization",
+    "schema:name": "Open Banking Implementation Entity",
+    "schema:url": "https://www.openbanking.org.uk/",
+    "schema:email": "servicedesk@openbanking.org.uk"
+  },
+  "dcat:dataset": [
+    {
+      "@type": ["schema:WebAPI", "dcat:DataService"],
+      "@id": "https://openbankinguk.github.io/read-write-api-site3/v4.0.1/",
+      "schema:name": "UK Open Banking Read/Write API",
+      "schema:description": "RESTful APIs enabling Third Party Providers (TPPs) to access customer account information and initiate payments on behalf of consumers and businesses, with customer consent, via Account Servicing Payment Service Providers (ASPSPs). Covers AISP, PISP, CBPII, and VRP roles under the UK Open Banking Standard v4.0.1.",
+      "schema:documentation": "https://openbankinguk.github.io/read-write-api-site3/v4.0.1/",
+      "schema:version": "4.0.1",
+      "ob:baseURL": "https://{aspsp-host}/open-banking/v4.0",
+      "schema:keywords": [
+        "Account Information",
+        "Payment Initiation",
+        "Variable Recurring Payments",
+        "Confirmation of Funds",
+        "Event Notifications"
+      ],
+      "dcat:endpointURL": "https://{aspsp-host}/open-banking/v4.0",
+      "schema:hasPart": [
+        {
+          "@type": "schema:WebAPI",
+          "schema:name": "Account and Transaction API",
+          "schema:version": "4.0.1",
+          "ob:specificationURL": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/account-info-openapi.yaml",
+          "ob:pathCount": 28,
+          "ob:schemaCount": 243
+        },
+        {
+          "@type": "schema:WebAPI",
+          "schema:name": "Payment Initiation API",
+          "schema:version": "4.0.1",
+          "ob:specificationURL": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/payment-initiation-openapi.yaml",
+          "ob:pathCount": 40,
+          "ob:schemaCount": 110
+        },
+        {
+          "@type": "schema:WebAPI",
+          "schema:name": "Confirmation of Funds API",
+          "schema:version": "4.0.1",
+          "ob:specificationURL": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/confirmation-funds-openapi.yaml",
+          "ob:pathCount": 3,
+          "ob:schemaCount": 15
+        },
+        {
+          "@type": "schema:WebAPI",
+          "schema:name": "Events API (ASPSP Endpoints)",
+          "schema:version": "4.0.1",
+          "ob:specificationURL": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/events-openapi.yaml",
+          "ob:pathCount": 3,
+          "ob:schemaCount": 12
+        },
+        {
+          "@type": "schema:WebAPI",
+          "schema:name": "Event Notification API (TPP Endpoints)",
+          "schema:version": "4.0.1",
+          "ob:specificationURL": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/event-notifications-openapi.yaml",
+          "ob:pathCount": 1,
+          "ob:schemaCount": 5
+        },
+        {
+          "@type": "schema:WebAPI",
+          "schema:name": "Variable Recurring Payments API",
+          "schema:version": "4.0.1",
+          "ob:specificationURL": "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/vrp-openapi.yaml",
+          "ob:pathCount": 6,
+          "ob:schemaCount": 83
+        }
+      ],
+      "schema:sameAs": "https://github.com/OpenBankingUK/read-write-api-specs"
+    },
+    {
+      "@type": ["schema:WebAPI", "dcat:DataService"],
+      "@id": "https://openbankinguk.github.io/opendata-api-docs-pub/",
+      "schema:name": "UK Open Banking Open Data API",
+      "schema:description": "Public-facing APIs enabling third-party developers to access standardized open data published by Account Servicing Payment Service Providers, including ATM locations, branch locations, personal current account products, business current account products, SME credit cards, and SME loans. No customer authentication required.",
+      "schema:documentation": "https://openbankinguk.github.io/opendata-api-docs-pub/",
+      "ob:baseURL": "https://{aspsp-host}/open-banking/v2.4",
+      "schema:keywords": [
+        "ATM Locator",
+        "Branch Locator",
+        "Product Data",
+        "Open Data",
+        "Public APIs"
+      ],
+      "dcat:endpointURL": "https://{aspsp-host}/open-banking/v2.4",
+      "schema:sameAs": "https://github.com/OpenBankingUK/opendata-api-spec-compiled"
+    },
+    {
+      "@type": ["schema:WebAPI", "dcat:DataService"],
+      "@id": "https://standards.openbanking.org.uk/api-specifications/",
+      "schema:name": "UK Open Banking Dynamic Client Registration API",
+      "schema:description": "Allows TPPs to dynamically register as OAuth clients with ASPSPs by submitting Software Statement Assertions issued by the Open Banking Directory. Supports client creation, retrieval, update, and deletion, and enables automated TPP onboarding without manual bank-by-bank enrollment.",
+      "schema:documentation": "https://openbanking.atlassian.net/wiki/spaces/DZ/pages/1150124033/",
+      "ob:baseURL": "https://{aspsp-host}/open-banking/v3.3",
+      "schema:keywords": [
+        "Dynamic Client Registration",
+        "OAuth",
+        "TPP Onboarding",
+        "Security"
+      ]
+    },
+    {
+      "@type": ["schema:WebAPI", "dcat:DataService"],
+      "@id": "https://directory.openbanking.org.uk/",
+      "schema:name": "UK Open Banking Directory API",
+      "schema:description": "Technical API describing the Open Banking Directory, including participant registration, Software Statement management, and service discovery for TPPs and ASPSPs operating within the UK Open Banking ecosystem. Enables TPPs to obtain credentials required to access banking APIs.",
+      "schema:documentation": "https://openbanking.atlassian.net/wiki/spaces/DZ/pages/1150124033/",
+      "schema:keywords": [
+        "Directory",
+        "Participant Registration",
+        "Software Statements",
+        "Service Discovery"
+      ]
+    }
+  ],
+  "schema:mainEntityOfPage": "https://www.openbanking.org.uk/",
+  "schema:additionalProperty": [
+    {
+      "@type": "schema:PropertyValue",
+      "schema:name": "DeveloperPortal",
+      "schema:value": "https://openbanking.atlassian.net/wiki/spaces/DZ/overview"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "schema:name": "Standards",
+      "schema:value": "https://standards.openbanking.org.uk/"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "schema:name": "GitHubOrganization",
+      "schema:value": "https://github.com/OpenBankingUK"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "schema:name": "APIPerformance",
+      "schema:value": "https://www.openbanking.org.uk/api-performance/"
+    }
+  ]
+}
