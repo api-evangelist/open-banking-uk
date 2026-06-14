@@ -1,0 +1,61 @@
+name: UK Open Banking API Plans
+description: Access model for the UK Open Banking APIs. The core Read/Write, Open Data, and Dynamic Client Registration APIs are mandated under the UK Open Banking Standard and PSD2 Regulatory Technical Standards (RTS). Regulated ASPSPs must provide these APIs at no charge to licensed TPPs. Premium APIs (such as commercial VRP beyond sweeping mandates) may carry fees governed by JROC commercial pricing principles.
+url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/plans/plans.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+
+plans:
+
+  - name: Regulated (Mandatory) Access
+    description: All CMA9 banks and participating ASPSPs are legally required to provide the core Open Banking APIs (AISP, PISP, CoF, Open Data, DCR) free of charge to TPPs holding valid FCA authorisation and registered on the Open Banking Directory. No subscription or API fees apply for regulated use cases under PSD2 / CMA Order obligations.
+    url: https://www.openbanking.org.uk/
+    type: Regulatory
+    cost: Free
+    audience: FCA-authorised TPPs (AISPs, PISPs, CBPIIs)
+    requirements:
+      - FCA authorisation as AISP, PISP, or CBPII
+      - Registration on the Open Banking Directory
+      - Valid Software Statement Assertion (SSA) from the OB Directory
+      - Dynamic Client Registration (DCR) with each target ASPSP
+    apis:
+      - Read/Write API (AISP endpoints)
+      - Read/Write API (PISP endpoints)
+      - Read/Write API (CoF endpoints)
+      - Read/Write API (VRP sweeping endpoints)
+      - Open Data API
+      - Dynamic Client Registration API
+      - Directory API
+
+  - name: Premium / Commercial API Access
+    description: Premium APIs including commercial Variable Recurring Payments (non-sweeping VRPs) and enhanced data services may be subject to commercial agreements and fees between individual ASPSPs and TPPs. Fees must comply with JROC commercial pricing principles — broadly reflecting long-run costs, treating TPPs fairly, and being transparent. No industry-wide fee schedule exists; terms are negotiated bilaterally.
+    url: https://www.fca.org.uk/news/news-stories/joint-regulatory-oversight-committee-commercial-pricing-principles-open-banking
+    type: Commercial
+    cost: Negotiated (JROC-governed principles)
+    audience: TPPs seeking premium or non-mandated API capabilities
+    requirements:
+      - FCA authorisation
+      - Bilateral commercial agreement with target ASPSP
+      - Compliance with JROC pricing principles
+    apis:
+      - Read/Write API (commercial VRP endpoints)
+      - Enhanced data services (where offered)
+
+  - name: Sandbox / Testing Access
+    description: The Open Banking Directory Sandbox provides a test environment with synthetic data for TPPs to develop and validate integrations before going live. Access is available free of charge to organisations exploring Open Banking participation, prior to full FCA authorisation.
+    url: https://openbanking.atlassian.net/wiki/spaces/DZ/overview
+    type: Developer
+    cost: Free
+    audience: Developers and organisations evaluating Open Banking integration
+    requirements:
+      - Registration on the Directory Sandbox
+      - No FCA authorisation required for sandbox access
+    apis:
+      - Read/Write API (sandbox)
+      - Open Data API (sandbox)
+      - Dynamic Client Registration API (sandbox)
+      - Directory API (sandbox)
+
+notes:
+  - The five JROC commercial pricing principles require that fees broadly reflect long-run costs, incentivise investment and innovation, incentivise take-up of open banking, treat TPPs fairly, and be transparent.
+  - Mandatory API access under the CMA Order is free at point of use; ASPSPs bear the cost of providing the infrastructure.
+  - API availability and performance SLAs are set by the Open Banking Standards operational guidelines (99.5%+ availability, 750ms TTLB targets).

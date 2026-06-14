@@ -1,0 +1,74 @@
+name: UK Open Banking API Rate Limits and Performance Requirements
+description: Performance and availability requirements for UK Open Banking APIs as defined in the Open Banking Operational Guidelines. These are minimum standards that all ASPSPs (Account Servicing Payment Service Providers) must meet under the UK Open Banking Standard and PSD2 Regulatory Technical Standards. Rate limits in the traditional requests-per-minute sense are not specified by the standard; instead, requirements focus on response time, availability, and error rate KPIs.
+url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/rate-limits/rate-limits.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+
+source:
+  name: Open Banking Operational Guidelines — Availability and Performance KPIs
+  url: https://standards.openbanking.org.uk/operational-guidelines/availability-and-performance/key-indicators-for-availability-and-performance-performance/latest/
+
+performanceKPIs:
+
+  - name: PISP Response Time (Payment Initiation)
+    description: Daily average Time to Last Byte (TTLB) for the full Payment Initiation Service Provider flow, including OIDC token endpoints, consent creation, authorization, and payment order submission.
+    target: 750ms average TTLB per response
+    calculation: Average of (Ta + Tb + Td + Te + Tg) across all daily PISP requests
+    scope: All PISP-facing endpoints including /domestic-payment-consents, /domestic-payments, /authorization, and token endpoints
+
+  - name: AISP Response Time (Account Information)
+    description: Daily average TTLB for the Account Information Service Provider flow, covering consent, accounts, balances, transactions, beneficiaries, standing orders, and product data.
+    target: 750ms average TTLB per response or per page of paginated results
+    calculation: Average of (Ta + Tb + Td + Te + Tf + Tg) / Vg across all daily AISP requests
+    scope: All AISP-facing endpoints including /account-access-consents, /accounts, /balances, /transactions, /beneficiaries, /standing-orders, /products
+
+  - name: Confirmation of Funds (CoF) Response Time
+    description: Daily average TTLB for Confirmation of Funds requests by CBPIIs and PISPs checking available funds before payment.
+    target: 750ms average TTLB per response
+    benchmark: 300ms average / 500ms maximum per individual response (indicative)
+    calculation: Average of (Ta + Tb + Td + Te + Tf) / Vf across all daily CoF requests
+    scope: /funds-confirmation-consents and /funds-confirmations endpoints
+
+  - name: Daily Error Response Rate
+    description: The proportion of ASPSP-attributable error responses (5xx HTTP status codes) relative to total API requests across all endpoints in a calendar day.
+    target: 0.5% or less average daily error rate across all endpoints
+    calculation: (Count of 5xx responses attributable to ASPSP) / (Total API requests) * 100
+    note: 4xx responses (client errors, PSU errors) are excluded from this metric
+
+availabilityKPIs:
+
+  - name: API Availability
+    description: Percentage of time that all Open Banking API endpoints are available and responding correctly, measured on a monthly basis.
+    target: 99.5% monthly availability (minimum per operational guidelines)
+    observed: 99.70% average API availability (reported April metrics)
+    note: Planned downtime outside core hours may be excluded from calculation per operational guidelines
+
+  - name: Average Response Time (Observed)
+    description: Published monthly performance metrics from the Open Banking API performance dashboard.
+    observed: 384ms average response time (April metrics)
+    dashboardUrl: https://www.openbanking.org.uk/api-performance/
+
+  - name: API Success Rate (Observed)
+    description: Percentage of total API calls that complete successfully (non-error).
+    observed: 99.51% successful API call rate (April metrics)
+
+rateLimitingGuidance:
+  - description: The UK Open Banking Standard does not prescribe a fixed requests-per-second or requests-per-minute rate limit at the specification level. Individual ASPSPs may implement their own fair-use throttling as part of their implementation, provided it does not create a barrier to equivalent access compared to their own proprietary channels.
+  - description: ASPSPs are required to ensure their interfaces do not place obstacles on TPPs that are not present for PSUs accessing their own accounts directly, per PSD2 Article 32 and EBA guidelines.
+  - description: Pagination is used on high-volume endpoints (e.g., /transactions) to manage response size, with page parameters in query strings. ASPSPs may limit page sizes but must support pagination navigation via links.
+
+pagingRequirements:
+  - endpoint: /accounts/{AccountId}/transactions
+    description: Transactions endpoint supports and may require pagination for large datasets
+    paginationStyle: Link-based pagination via response body links.next and links.last
+  - endpoint: /accounts/{AccountId}/statements
+    description: Statements endpoint supports pagination for accounts with many statements
+    paginationStyle: Link-based pagination
+
+technicalConstraints:
+  - name: Idempotency
+    description: POST requests for consent creation and payment submission must support idempotency via the x-idempotency-key header to prevent duplicate submissions
+  - name: Consent Duration
+    description: Account access consents can be established with optional expiry dates; refresh tokens may be long-lived per ASPSP policy
+  - name: FAPI Compliance
+    description: All interfaces must comply with the Financial-grade API (FAPI) security profile, requiring mTLS or private_key_jwt for client authentication

@@ -1,0 +1,148 @@
+name: UK Open Banking
+description: UK Open Banking standard with REST APIs for account and transaction data, payment initiation, variable recurring payments, and confirmation of funds for regulated financial services. Governed by the Open Banking Implementation Entity (OBIE) and overseen by the FCA and PSR under PSD2 and the CMA Order.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/apis.yml
+version: "0.19"
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+
+tags:
+  - Open Banking
+  - Financial Services
+  - Payments
+  - Account Information
+  - PSD2
+  - UK
+  - Banking
+  - Fintech
+  - Regulated
+
+apis:
+
+  - name: UK Open Banking Read/Write API
+    description: RESTful APIs enabling Third Party Providers (TPPs) to access customer account information and initiate payments on behalf of consumers and businesses, with customer consent, via Account Servicing Payment Service Providers (ASPSPs). Covers AISP, PISP, CBPII, and VRP roles under the UK Open Banking Standard v4.0.1.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://openbankinguk.github.io/read-write-api-site3/v4.0.1/
+    baseURL: https://{aspsp-host}/open-banking/v4.0
+    tags:
+      - Account Information
+      - Payment Initiation
+      - Variable Recurring Payments
+      - Confirmation of Funds
+      - Event Notifications
+    properties:
+      - type: Documentation
+        url: https://openbankinguk.github.io/read-write-api-site3/v4.0.1/
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/account-info-openapi.yaml
+      - type: GitHubRepository
+        url: https://github.com/OpenBankingUK/read-write-api-specs
+      - type: Sandbox
+        url: https://openbanking.atlassian.net/wiki/spaces/DZ/overview
+      - type: ConformanceSuite
+        url: https://github.com/OpenBankingUK/conformance-suite
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/plans/plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/rate-limits/rate-limits.yml
+    contact:
+      - FN: Open Banking Implementation Entity
+        url: https://www.openbanking.org.uk/
+        email: servicedesk@openbanking.org.uk
+
+  - name: UK Open Banking Open Data API
+    description: Public-facing APIs enabling third-party developers to access standardized open data published by Account Servicing Payment Service Providers, including ATM locations, branch locations, personal current account products, business current account products, SME credit cards, and SME loans. No customer authentication required.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/
+    baseURL: https://{aspsp-host}/open-banking/v2.4
+    tags:
+      - ATM Locator
+      - Branch Locator
+      - Product Data
+      - Open Data
+      - Public APIs
+    properties:
+      - type: Documentation
+        url: https://openbankinguk.github.io/opendata-api-docs-pub/
+      - type: GitHubRepository
+        url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/plans/plans.yml
+    contact:
+      - FN: Open Banking Implementation Entity
+        url: https://www.openbanking.org.uk/
+        email: servicedesk@openbanking.org.uk
+
+  - name: UK Open Banking Dynamic Client Registration API
+    description: Allows TPPs to dynamically register as OAuth clients with ASPSPs by submitting Software Statement Assertions issued by the Open Banking Directory. Supports client creation, retrieval, update, and deletion, and enables automated TPP onboarding without manual bank-by-bank enrollment.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://standards.openbanking.org.uk/api-specifications/
+    baseURL: https://{aspsp-host}/open-banking/v3.3
+    tags:
+      - Dynamic Client Registration
+      - OAuth
+      - TPP Onboarding
+      - Security
+    properties:
+      - type: Documentation
+        url: https://openbanking.atlassian.net/wiki/spaces/DZ/pages/1150124033/
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/plans/plans.yml
+    contact:
+      - FN: Open Banking Implementation Entity
+        url: https://www.openbanking.org.uk/
+        email: servicedesk@openbanking.org.uk
+
+  - name: UK Open Banking Directory API
+    description: Technical API describing the Open Banking Directory, including participant registration, Software Statement management, and service discovery for TPPs and ASPSPs operating within the UK Open Banking ecosystem. Enables TPPs to obtain credentials required to access banking APIs.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://directory.openbanking.org.uk/
+    baseURL: https://directory.openbanking.org.uk/
+    tags:
+      - Directory
+      - Participant Registration
+      - Software Statements
+      - Service Discovery
+    properties:
+      - type: Documentation
+        url: https://openbanking.atlassian.net/wiki/spaces/DZ/pages/1150124033/
+      - type: Sandbox
+        url: https://directory.openbanking.org.uk/
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/plans/plans.yml
+    contact:
+      - FN: Open Banking Implementation Entity
+        url: https://www.openbanking.org.uk/
+        email: servicedesk@openbanking.org.uk
+
+common:
+  - type: Website
+    url: https://www.openbanking.org.uk/
+  - type: Standards
+    url: https://standards.openbanking.org.uk/
+  - type: DeveloperPortal
+    url: https://openbanking.atlassian.net/wiki/spaces/DZ/overview
+  - type: GitHubOrganization
+    url: https://github.com/OpenBankingUK
+  - type: APIPerformance
+    url: https://www.openbanking.org.uk/api-performance/
+  - type: Blog
+    url: https://www.openbanking.org.uk/news/blog/
+  - type: News
+    url: https://www.openbanking.org.uk/news/
+  - type: TermsOfService
+    url: https://www.openbanking.org.uk/terms/
+  - type: PrivacyPolicy
+    url: https://www.openbanking.org.uk/privacy-policy/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/finops/finops.yml
+
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+    url: https://apievangelist.com

@@ -1,0 +1,99 @@
+name: UK Open Banking API FinOps
+description: Financial operations considerations for consuming UK Open Banking APIs. Because the mandated Open Banking APIs are provided free of charge to licensed TPPs under PSD2 and the CMA Order, the primary cost drivers are on the consumer side — infrastructure, compliance, licensing, and third-party aggregation services — rather than API call fees. This document covers cost considerations for organisations building on UK Open Banking.
+url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/finops/finops.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+
+overview:
+  model: Regulatory mandate — no API call fees for core mandated APIs
+  basis: UK Open Banking standard APIs are provided free of charge by ASPSPs to FCA-authorised TPPs under the CMA Order and PSD2 obligations. Cost optimisation focuses on integration efficiency, compliance overhead, and infrastructure rather than API billing.
+
+costCategories:
+
+  - category: Regulatory Licensing
+    description: FCA authorisation fees for operating as an AISP, PISP, or CBPII in the UK. Required before accessing production Open Banking APIs.
+    items:
+      - name: FCA Application Fee (AISP)
+        description: One-time application fee to become an FCA-registered Account Information Service Provider
+        feeType: One-time
+        approximate: "£0–£5,000 depending on application complexity and firm type"
+        url: https://www.fca.org.uk/firms/fees
+      - name: FCA Application Fee (PISP)
+        description: One-time application fee to become an FCA-authorised Payment Institution providing Payment Initiation Services
+        feeType: One-time
+        approximate: "£1,500–£25,000 depending on firm type and scope"
+        url: https://www.fca.org.uk/firms/fees
+      - name: FCA Annual Fee
+        description: Annual periodic fee payable to the FCA based on firm category and regulated income
+        feeType: Annual recurring
+        url: https://www.fca.org.uk/firms/fees
+
+  - category: Open Banking Directory Registration
+    description: Fees associated with joining and operating within the Open Banking Directory under OBIE governance.
+    items:
+      - name: Directory Registration
+        description: TPPs register on the Open Banking Directory to obtain Software Statements and credentials. Registration costs are generally absorbed by the regulatory process.
+        feeType: Included with FCA authorisation process
+        notes: No separate Directory fee published for standard TPP registration
+
+  - category: Premium API Commercial Agreements
+    description: For non-mandated premium API capabilities (e.g., commercial VRP beyond sweeping, enhanced data), bilateral commercial agreements with individual ASPSPs may involve negotiated fees.
+    items:
+      - name: Commercial VRP Fees
+        description: Fees for Variable Recurring Payment capabilities beyond the mandatory sweeping use case, subject to JROC commercial pricing principles
+        feeType: Negotiated per ASPSP
+        principles: Must broadly reflect long-run costs; treat TPPs fairly; be transparent
+        url: https://www.fca.org.uk/news/news-stories/joint-regulatory-oversight-committee-commercial-pricing-principles-open-banking
+      - name: Enhanced Data Products
+        description: Some ASPSPs may offer enriched data products beyond the mandated minimum; fees negotiated bilaterally
+        feeType: Negotiated per ASPSP
+
+  - category: Third-Party Aggregation / Connectivity
+    description: Many organisations choose to access Open Banking data via a third-party aggregation layer (e.g., TrueLayer, Plaid, Yapily, Token.io) rather than building direct ASPSP connections. These intermediaries charge per-call or subscription fees.
+    items:
+      - name: API Aggregator Subscription
+        description: Monthly or per-call fees to an Open Banking aggregator for multi-bank connectivity, removing the need to maintain individual ASPSP connections
+        feeType: Subscription or per-call
+        examples:
+          - TrueLayer
+          - Yapily
+          - Token.io
+          - Plaid (UK)
+          - Moneyhub
+        costRange: "Varies widely; typically £0.01–£0.10 per API call or tiered monthly subscriptions from hundreds to thousands of pounds per month depending on volume"
+
+  - category: Infrastructure and Compliance
+    description: Internal costs for building, operating, and maintaining Open Banking integrations, security compliance, and monitoring.
+    items:
+      - name: mTLS Certificate Management
+        description: FAPI-compliant mutual TLS certificates required for production API access; typically obtained via Open Banking Directory or recognised CAs
+        feeType: Annual
+        approximate: "£100–£1,000 per certificate per year"
+      - name: Consent Management Infrastructure
+        description: Development and hosting costs for building consent management flows, storing consent records, and managing authorization redirects
+        feeType: Internal infrastructure cost
+      - name: API Monitoring and Alerting
+        description: Tooling to monitor ASPSP API availability (99.5% target), response times, and error rates across multiple bank connections
+        feeType: Internal or SaaS tooling cost
+      - name: FAPI Security Compliance
+        description: Ongoing costs for maintaining Financial-grade API security profile compliance (private_key_jwt, mTLS, PKCE, CIBA)
+        feeType: Internal engineering and security cost
+
+optimisationGuidance:
+  - tip: Use pagination efficiently on high-volume endpoints (transactions, statements) to reduce response payload size and connection time
+  - tip: Implement idempotency keys correctly to prevent duplicate payment submissions that may trigger support overhead
+  - tip: Cache Open Data API responses (ATM locations, branch data, product data) locally — this data changes infrequently and does not require per-request ASPSP calls
+  - tip: Monitor ASPSP-level availability via the Open Banking API performance dashboard to route around underperforming institutions
+  - tip: For multi-bank coverage, evaluate whether a third-party aggregator provides better economics than maintaining individual ASPSP connections at scale
+  - tip: Use the conformance suite to validate integrations early, reducing costly integration failures in production
+  - tip: For VRP use cases, evaluate whether sweeping (mandatory, free) vs commercial VRP (fee-bearing) meets your use case before entering commercial negotiations
+
+references:
+  - name: FCA Fees
+    url: https://www.fca.org.uk/firms/fees
+  - name: JROC Commercial Pricing Principles
+    url: https://www.fca.org.uk/news/news-stories/joint-regulatory-oversight-committee-commercial-pricing-principles-open-banking
+  - name: Open Banking API Performance Dashboard
+    url: https://www.openbanking.org.uk/api-performance/
+  - name: Open Banking Directory
+    url: https://directory.openbanking.org.uk/
