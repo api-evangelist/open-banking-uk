@@ -117,6 +117,10 @@ apis:
         email: servicedesk@openbanking.org.uk
 
 common:
+  - type: DomainSecurity
+    url: security/open-banking-uk-domain-security.yml
+  - type: Authentication
+    url: authentication/open-banking-uk-authentication.yml
   - type: OAuthScopes
     url: scopes/open-banking-uk-scopes.yml
   - type: Website
