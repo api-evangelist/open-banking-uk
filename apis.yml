@@ -117,6 +117,8 @@ apis:
         email: servicedesk@openbanking.org.uk
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/open-banking-uk-agentic-access.yml
   - type: DomainSecurity
     url: security/open-banking-uk-domain-security.yml
   - type: Authentication
