@@ -1,0 +1,141 @@
+{
+  "item": [
+    {
+      "id": "dcf27dfc-2026-4ee4-8c93-31bff5b4b25e",
+      "name": "Event Notification",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "61e4b3ce-2141-4707-8bfd-b714a121c12b",
+          "name": "Send an event notification",
+          "request": {
+            "name": "Send an event notification",
+            "description": {
+              "content": "Allows the ASPSP to send an event-notification resource to a TPP.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "event-notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "An RFC4122 UID used as a correlation id.",
+                "key": "x-fapi-interaction-id",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "Only used if a TPP requires the client ID in order to return rate limit headers. \n\nThis header __must not__ be used for client authentication\n",
+                "key": "x-client-id",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/jwt"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<base64>"
+            }
+          },
+          "response": [
+            {
+              "id": "8e98bbd2-8a96-43a8-897b-4b148d001d57",
+              "name": "Accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "event-notifications"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "An RFC4122 UID used as a correlation id.",
+                    "key": "x-fapi-interaction-id",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Only used if a TPP requires the client ID in order to return rate limit headers. \n\nThis header __must not__ be used for client authentication\n",
+                    "key": "x-client-id",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<base64>"
+                }
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "A non-empty list of Quota Policy Items. The Item value __MUST__ be a String.\n\nExample:\n`RateLimit-Policy: \"default\";q=100;w=10`\n\nThe **REQUIRED** \"q\" parameter indicates the quota allocated by this policy measured in quota units.\n\nThe **OPTIONAL** \"w\" parameter value conveys a time window.\n",
+                  "key": "RateLimit-Policy",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "A server uses the \"RateLimit\" response header field to communicate the current service limit for a quota policy for a particular partition key.\n\nExample:\n`RateLimit: \"default\";r=50;t=30`\n\nThe **REQUIRED** \"r\" parameter value conveys the remaining quota units for the identified policy.\n\nThe **OPTIONAL** \"t\" parameter value conveys the time window reset time for the identified policy.\n",
+                  "key": "RateLimit",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/open-banking/v4.0/aisp",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a60a0731-8be8-4398-97ac-ccffa4e52316",
+    "name": "Account and Transaction API Specification Account Access Consents Event Notification API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Swagger for Account and Transaction API Specification.\n\n**Please Note**: There are no optional fields, if a field is not marked as “Required” it is a Conditional field.\n\n\nContact Support:\n Name: Service Desk\n Email: ServiceDesk@openbanking.org.uk",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "item": [
+    {
+      "id": "c5cfd1e8-c3bf-4b9b-a770-9ed4439fd120",
+      "name": "PCA",
+      "description": {
+        "content": "Endpoint for getting Personal Current Account data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "819de7d1-eebe-4c16-bc1c-99529ece752b",
+          "name": "Gets a list of all `Personal Current Account` objects.",
+          "request": {
+            "name": "Gets a list of all `Personal Current Account` objects.",
+            "description": {
+              "content": "Gets a list of all `Personal Current Account` objects.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "personal-current-accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                "key": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                "key": "If-None-Match",
+                "value": ""
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "46b22ecf-1b63-4323-a299-4fafedce0024",
+              "name": "Successful response with a list of `Personal Current Account` data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "personal-current-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "A unique ID identifying whether this resource has changed",
+                  "key": "Etag",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Describes how long this response can be cached",
+                  "key": "Cache-Control",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d7424e4c-a035-4b42-bfd9-2b771454aba0",
+              "name": "You have sent a request which could not be understood.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "personal-current-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "192a631e-cc66-4309-b38c-8ef7c1c759ef",
+              "name": "Your client has failed to submit a request, and a timeout has occurred.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "personal-current-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Request Timeout",
+              "code": 408,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b500d741-1566-490e-97ed-791a10737b38",
+              "name": "You have requested this resource too often. Slow down.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "personal-current-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a624ce65-8352-4c8a-8b2c-6101a4906aec",
+              "name": "An error occurred on the server. No further information is available.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "personal-current-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "73e5aa5c-30af-4be0-9d7f-9c4a6752cf5c",
+              "name": "The service is temporarily unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "personal-current-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "61cbbb33-5296-4953-b9dd-80628e6c2ed1",
+              "name": "A standard error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "personal-current-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7074489a-7d65-4984-a9b5-6c635a2f42fc",
+          "name": "Gets header information on the current set of `Personal Current Account` data",
+          "request": {
+            "name": "Gets header information on the current set of `Personal Current Account` data",
+            "description": {
+              "content": "Gets header information on the current set of `Personal Current Account` data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "personal-current-accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                "key": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                "key": "If-None-Match",
+                "value": ""
+              }
+            ],
+            "method": "HEAD",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3701e404-dbe9-4744-b78e-678ba604c941",
+              "name": "No response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "personal-current-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/open-banking/v4.0/aisp",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a9a95981-09f7-40bd-bc2b-06d072a26e62",
+    "name": "Account and Transaction API Specification Account Access Consents PCA API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Swagger for Account and Transaction API Specification.\n\n**Please Note**: There are no optional fields, if a field is not marked as “Required” it is a Conditional field.\n\n\nContact Support:\n Name: Service Desk\n Email: ServiceDesk@openbanking.org.uk",
+      "type": "text/plain"
+    }
+  }
+}

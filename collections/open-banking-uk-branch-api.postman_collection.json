@@ -1,0 +1,636 @@
+{
+  "item": [
+    {
+      "id": "9dce7174-4196-44d1-9752-17ed8a7074a6",
+      "name": "Branch",
+      "description": {
+        "content": "Endpoint for getting Branch data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a6c9e17e-b255-4c7d-a872-da983cb766df",
+          "name": "Gets a list of all `Branch` objects.",
+          "request": {
+            "name": "Gets a list of all `Branch` objects.",
+            "description": {
+              "content": "Gets a list of all `Branch` objects.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "branches"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                "key": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                "key": "If-None-Match",
+                "value": ""
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6c9c3018-7d12-44a4-aaa6-3f7f7121d47e",
+              "name": "Successful response with a list of `Branch` data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "branches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "A unique ID identifying whether this resource has changed",
+                  "key": "Etag",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Describes how long this response can be cached",
+                  "key": "Cache-Control",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "61d604ef-d100-4162-9c3b-9fbb52ec8003",
+              "name": "You have sent a request which could not be understood.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "branches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2edf57d0-4d31-4ca9-9371-4961945f85ed",
+              "name": "Your client has failed to submit a request, and a timeout has occurred.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "branches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Request Timeout",
+              "code": 408,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3c172d69-082a-46c8-a0c0-d4755b019d41",
+              "name": "You have requested this resource too often. Slow down.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "branches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "78f8262f-50ea-407d-b033-7f16e5d60802",
+              "name": "An error occurred on the server. No further information is available.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "branches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "093d6f90-7d01-4cba-8f98-2e588ecb9d92",
+              "name": "The service is temporarily unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "branches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e8cb4ff5-c7fd-441f-a004-204e174f004c",
+              "name": "A standard error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "branches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "15ca6877-ab1c-40fa-b400-c9076ffcae2f",
+          "name": "Gets header information on the current set of `Branch` data",
+          "request": {
+            "name": "Gets header information on the current set of `Branch` data",
+            "description": {
+              "content": "Gets header information on the current set of `Branch` data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "branches"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                "key": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                "key": "If-None-Match",
+                "value": ""
+              }
+            ],
+            "method": "HEAD",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5a74182d-e798-4480-84d4-0a112f652beb",
+              "name": "No response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "branches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/open-banking/v4.0/aisp",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7bc49b4d-e212-4c1c-912b-bd560a8420d6",
+    "name": "Account and Transaction API Specification Account Access Consents Branch API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Swagger for Account and Transaction API Specification.\n\n**Please Note**: There are no optional fields, if a field is not marked as “Required” it is a Conditional field.\n\n\nContact Support:\n Name: Service Desk\n Email: ServiceDesk@openbanking.org.uk",
+      "type": "text/plain"
+    }
+  }
+}

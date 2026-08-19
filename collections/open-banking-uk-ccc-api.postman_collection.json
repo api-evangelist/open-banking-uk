@@ -1,0 +1,636 @@
+{
+  "item": [
+    {
+      "id": "5bcaef5f-478e-49fd-8923-805acb7cf26d",
+      "name": "CCC",
+      "description": {
+        "content": "Endpoint for getting Commercial Credit Card data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "13f1db3c-c0a0-4c76-96e5-6af2040ead7c",
+          "name": "Gets a list of all `Commerical Credit Card` objects.",
+          "request": {
+            "name": "Gets a list of all `Commerical Credit Card` objects.",
+            "description": {
+              "content": "Gets a list of all `Commerical Credit Card` objects.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "commercial-credit-cards"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                "key": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                "key": "If-None-Match",
+                "value": ""
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dddc57ed-7d91-486b-991c-7b735cd34d89",
+              "name": "Successful response with a list of `Commercial Credit Card` data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "commercial-credit-cards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "A unique ID identifying whether this resource has changed",
+                  "key": "Etag",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Describes how long this response can be cached",
+                  "key": "Cache-Control",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "79f14737-c5b4-4dff-8f71-1215ca603e82",
+              "name": "You have sent a request which could not be understood.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "commercial-credit-cards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "77339cef-b7dc-4204-83bb-45191658178d",
+              "name": "Your client has failed to submit a request, and a timeout has occurred.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "commercial-credit-cards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Request Timeout",
+              "code": 408,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9d9748d3-5f19-4092-8635-51d9853c8b9c",
+              "name": "You have requested this resource too often. Slow down.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "commercial-credit-cards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4e34e658-7e5d-496c-9fad-0913843d837d",
+              "name": "An error occurred on the server. No further information is available.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "commercial-credit-cards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "10cec499-4bda-4f10-9660-77b21f350f9a",
+              "name": "The service is temporarily unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "commercial-credit-cards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c5916311-5fee-42ad-82bf-1438b4fda982",
+              "name": "A standard error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "commercial-credit-cards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": ""
+                },
+                {
+                  "disabled": false,
+                  "description": "The HTTP status code defining the error",
+                  "key": "Status Code",
+                  "value": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "891315a2-3355-4423-be3c-71931f2ed023",
+          "name": "Gets header information on the current set of `Commerical Credit Card` data",
+          "request": {
+            "name": "Gets header information on the current set of `Commerical Credit Card` data",
+            "description": {
+              "content": "Gets header information on the current set of `Commerical Credit Card` data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "commercial-credit-cards"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                "key": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                "key": "If-None-Match",
+                "value": ""
+              }
+            ],
+            "method": "HEAD",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fddfdaf9-9f30-4776-809e-f57c7f18a1ae",
+              "name": "No response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "commercial-credit-cards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": ""
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/open-banking/v4.0/aisp",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fa67a2e7-2d57-45b9-a3be-aa456c797e84",
+    "name": "Account and Transaction API Specification Account Access Consents CCC API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Swagger for Account and Transaction API Specification.\n\n**Please Note**: There are no optional fields, if a field is not marked as “Required” it is a Conditional field.\n\n\nContact Support:\n Name: Service Desk\n Email: ServiceDesk@openbanking.org.uk",
+      "type": "text/plain"
+    }
+  }
+}

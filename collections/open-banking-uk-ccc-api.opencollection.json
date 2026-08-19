@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account and Transaction API Specification Account Access Consents CCC API",
+    "version": "4.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CCC",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /commercial-credit-cards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/open-banking/v4.0/aisp/commercial-credit-cards",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `Commerical Credit Card` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /commercial-credit-cards",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "/open-banking/v4.0/aisp/commercial-credit-cards",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `Commerical Credit Card` data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

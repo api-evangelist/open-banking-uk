@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account and Transaction API Specification Account Access Consents Branch API",
+    "version": "4.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Branch",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /branches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/open-banking/v4.0/aisp/branches",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `Branch` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /branches",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "/open-banking/v4.0/aisp/branches",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `Branch` data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
