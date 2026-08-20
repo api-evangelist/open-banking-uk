@@ -22,6 +22,16 @@ specificationVersion: '0.23'
 
 tags:
   - Open Banking
+  - Financial-Services
+  - Payments
+  - Account Information
+  - PSD2
+  - UK
+  - Banking
+  - Fintech
+  - Regulated
+tags_raw:
+  - Open Banking
   - Financial Services
   - Payments
   - Account Information
@@ -68,6 +78,11 @@ apis:
   humanURL: https://standards.openbanking.org.uk/api-specifications/
   baseURL: https://{aspsp-host}/open-banking/v3.3
   tags:
+  - Dynamic Client Registration
+  - Authentication
+  - TPP Onboarding
+  - Security
+  tags_raw:
   - Dynamic Client Registration
   - OAuth
   - TPP Onboarding
@@ -138,6 +153,8 @@ apis:
   humanURL: https://openbankinguk.github.io/read-write-api-site3/v4.0.1/
   baseURL: https://{aspsp-host}/open-banking/v4.0
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -579,6 +596,8 @@ apis:
   humanURL: https://openbankinguk.github.io/read-write-api-site3/v4.0.1/
   baseURL: https://{aspsp-host}/open-banking/v4.0
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
@@ -929,6 +948,8 @@ apis:
   humanURL: https://openbankinguk.github.io/read-write-api-site3/v4.0.1/
   baseURL: https://{aspsp-host}/open-banking/v4.0
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
@@ -1049,6 +1070,8 @@ apis:
   humanURL: https://openbankinguk.github.io/read-write-api-site3/v4.0.1/
   baseURL: https://{aspsp-host}/open-banking/v4.0
   tags:
+  - Transaction
+  tags_raw:
   - Transactions
   properties:
   - type: OpenAPI
