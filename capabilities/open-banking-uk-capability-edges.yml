@@ -1,0 +1,221 @@
+slug: open-banking-uk
+provider: UK Open Banking
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Banking & Capital Markets
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 22
+edges:
+- tag: Domestic Payments
+  spec_file: open-banking-uk-domestic-payments-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.95
+  evidence: POST /domestic-payments  Initiate a Domestic Payment
+  reason: Operations literally initiate and retrieve domestic payment instructions (OBWriteDomestic2 /
+    OBWriteDomesticResponse5), which is payment initiation management.
+- tag: Domestic Scheduled Payments
+  spec_file: open-banking-uk-domestic-scheduled-payments-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.92
+  evidence: POST /domestic-scheduled-payments  Initiate a Domestic Scheduled Payment
+  reason: Initiation and retrieval of future-dated domestic payment instructions (OBWriteDomesticScheduled2)
+    is payment initiation management.
+- tag: International Payments
+  spec_file: open-banking-uk-international-payments-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.92
+  evidence: POST /international-payments  "Initiate an International Payment"
+  reason: Initiation and retrieval of international payments with currency amount schemas — cross-border
+    payment management.
+- tag: Domestic Payment Consents
+  spec_file: open-banking-uk-domestic-payment-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.9
+  evidence: POST /domestic-payment-consents  Create a Domestic Payment Consent; GET .../funds-confirmation  Confirm
+    availability of funds for a Domestic Payment
+  reason: Consent capture and authorisation for a domestic payment instruction, plus funds availability
+    check — this is payment instruction capture, validation and authorisation under PSD2 payment initiation.
+- tag: International Payment Consents
+  spec_file: open-banking-uk-international-payment-consents-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.9
+  evidence: POST /international-payment-consents  "Create an International Payment Consent"; "Confirm
+    Funds Availability for an International Payment"
+  reason: Consent and funds-confirmation for international (cross-border) payment initiation, with FX/currency
+    schemas — cross-border payment management.
+- tag: International Scheduled Payments
+  spec_file: open-banking-uk-international-scheduled-payments-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.9
+  evidence: POST /international-scheduled-payments  "Initiate an International Scheduled Payment"
+  reason: Future-dated international payment initiation — cross-border payment management.
+- tag: Domestic Scheduled Payment Consents
+  spec_file: open-banking-uk-domestic-scheduled-payment-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.88
+  evidence: POST /domestic-scheduled-payment-consents  Create a Domestic Scheduled Payment Consent
+  reason: Consent/authorisation artefact preceding submission of a scheduled domestic payment instruction
+    — payment instruction capture and authorisation.
+- tag: Domestic Standing Orders
+  spec_file: open-banking-uk-domestic-standing-orders-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.88
+  evidence: POST /domestic-standing-orders  Submit a Domestic Standing Order
+  reason: Submission and retrieval of standing order payment instructions (OBWriteDomesticStandingOrderResponse6)
+    is initiation of recurring payment instructions.
+- tag: International Scheduled Payments Consents
+  spec_file: open-banking-uk-international-scheduled-payments-consents-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.88
+  evidence: POST /international-scheduled-payment-consents  "Create an International Scheduled Payment
+    Consent"
+  reason: Consent and funds confirmation for scheduled cross-border payment instructions.
+- tag: International Standing Orders
+  spec_file: open-banking-uk-international-standing-orders-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.88
+  evidence: POST /international-standing-orders  "Submit an International Standing Order"; schema OBWriteInternationalStandingOrder4
+  reason: Recurring cross-border payment instruction submission — cross-border payment management.
+- tag: Domestic Standing Order Consents
+  spec_file: open-banking-uk-domestic-standing-order-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.85
+  evidence: POST /domestic-standing-order-consents  Create a Domestic Standing Order Consent
+  reason: Consent capture and authorisation for a recurring standing order payment instruction; frequency
+    schemas (OBFrequency6Code) confirm a recurring payment instruction, still within payment initiation.
+- tag: Domestic VRP Consents
+  spec_file: open-banking-uk-domestic-vrp-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.85
+  evidence: POST /domestic-vrp-consents  Create a domestic VRP consent; POST /domestic-vrp-consents/{ConsentId}/funds-confirmation  Confirm
+    Funds Availability for a Domestic VRP
+  reason: Lifecycle of variable recurring payment consents including authentication methods and funds
+    confirmation — mandate/authorisation layer of payment instruction capture.
+- tag: Domestic VRPs
+  spec_file: open-banking-uk-domestic-vrps-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.85
+  evidence: POST /domestic-vrps  Initiate a Domestic VRP
+  reason: Initiation and status retrieval of variable recurring payments under an existing consent; payment
+    instruction capture and authorisation. Could also touch real-time rails but the operations only evidence
+    initiation.
+- tag: International Standing Orders Consents
+  spec_file: open-banking-uk-international-standing-orders-consents-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.85
+  evidence: POST /international-standing-order-consents  "Create an International Standing Order Consent"
+  reason: Consent capture/authorisation for recurring cross-border payment instructions.
+- tag: File Payment Consents
+  spec_file: open-banking-uk-file-payment-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.82
+  evidence: POST /file-payment-consents  "Create a File Payment Consent"; "Upload a File for a ConsentId"
+  reason: Consent creation and authorisation for bulk/file payment instructions under PISP — payment instruction
+    capture, validation and authorisation.
+- tag: File Payments
+  spec_file: open-banking-uk-file-payments-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.82
+  evidence: POST /file-payments  "Submit a File Payment"; "Get payment details for a File Payment"
+  reason: Submission and status retrieval of bulk file-based payment instructions — payment initiation
+    of the instruction into the bank's rails.
+- tag: Products
+  spec_file: open-banking-uk-products-api-openapi.yml
+  capability_id: BC-1310
+  capability_id_l1: BC-1310
+  capability_name: Banking Product Management
+  confidence: 0.78
+  evidence: GET /products  'Get Products'; schemas OB_FeeType1Code, OB_OverdraftFeeType1Code, OB_InterestFixedVariableType1Code,
+    OBPCAData1, OBBCAData1
+  reason: Exposes the bank's product master for personal/business current accounts including fees, rates
+    and periods — banking product catalogue and parameters; evidence spans both catalogue and parameter
+    sub-capabilities so L1 only.
+- tag: Parties
+  spec_file: open-banking-uk-parties-api-openapi.yml
+  capability_id: BC-1300.40
+  capability_id_l1: BC-1300
+  capability_name: Customer Information Management
+  confidence: 0.72
+  evidence: GET /accounts/{AccountId}/party  'Get Party for an AccountId'; schemas FullLegalName, EmailAddress,
+    PhoneNumber_1, LEI, OBInternalLegalStructureType1Code
+  reason: The operations expose the account holder's identity/contact details (party) held by the bank
+    — banking customer information rather than any transactional capability.
+- tag: ATM
+  spec_file: open-banking-uk-atm-api-openapi.yml
+  capability_id: BC-1300.50
+  capability_id_l1: BC-1300
+  capability_name: Banking Channels Management
+  confidence: 0.7
+  evidence: GET /atms (Open Banking "Account and Transaction API Specification ... ATM API")
+  reason: The single operation lists ATMs — the Open Banking open-data ATM locator. Publishing and maintaining
+    ATM estate information is banking channel operations (branch, ATM, online). Confidence limited because
+    the tag carries no summaries or schemas, only the path.
+- tag: Branch
+  spec_file: open-banking-uk-branch-api-openapi.yml
+  capability_id: BC-1300.50
+  capability_id_l1: BC-1300
+  capability_name: Banking Channels Management
+  confidence: 0.7
+  evidence: GET /branches (Open Banking "Account and Transaction API Specification ... Branch API")
+  reason: The single operation lists bank branches — the Open Banking open-data branch locator — which
+    is branch/channel estate information, i.e. Banking Channels Management. Confidence limited by the
+    absence of summaries and schemas.
+- tag: Scheduled Payments
+  spec_file: open-banking-uk-scheduled-payments-api-openapi.yml
+  capability_id: BC-1340
+  capability_id_l1: BC-1340
+  capability_name: Payments & Card Management
+  confidence: 0.7
+  evidence: GET /accounts/{AccountId}/scheduled-payments  'Get Scheduled Payments for an AccountId'; schemas
+    ScheduledPaymentDateTime, OBInternalScheduleType1Code, OBCashAccount5_1
+  reason: Surfaces future-dated payment instructions held against a payment account — payments capability;
+    whether initiation or processing sub-capability is ambiguous for a read-only view.
+- tag: Standing Orders
+  spec_file: open-banking-uk-standing-orders-api-openapi.yml
+  capability_id: BC-1340
+  capability_id_l1: BC-1340
+  capability_name: Payments & Card Management
+  confidence: 0.7
+  evidence: GET /standing-orders  'Get Standing Orders'; schemas OBFrequency6Code, NextPaymentDateTime,
+    OBCashAccount5_1
+  reason: Recurring payment instructions (standing orders) with frequency and next payment date — payments
+    capability; read-only view so no single sub-capability is clearly named.

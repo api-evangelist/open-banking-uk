@@ -1104,6 +1104,9 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/rate-limits/rate-limits.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/open-banking-uk-capability-edges.yml
+    name: UK Open Banking Business Capability Map
   - type: IssueTracker
     url: https://github.com/OpenBankingUK/opendata-api-spec-compiled/issues
   - type: AgenticAccess
