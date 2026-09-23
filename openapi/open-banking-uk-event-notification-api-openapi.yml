@@ -1,12 +1,10 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Account and Transaction API Specification Account Access Consents Event Notification API
-  description: 'Swagger for Account and Transaction API Specification.
+  title: Specification - TPP Endpoints Event Notification API
+  description: 'Swagger for Event Notification API Specification - TPP Endpoints.
 
 
-    **Please Note**: There are no optional fields, if a field is not marked as “Required” it is a Conditional field.
-
-    '
+    **Please Note**: There are no optional fields, if a field is not marked as “Required” it is a Conditional field.'
   termsOfService: https://www.openbanking.org.uk/terms
   contact:
     name: Service Desk
@@ -16,7 +14,7 @@ info:
     url: https://www.openbanking.org.uk/open-licence
   version: 4.0.1
 servers:
-- url: /open-banking/v4.0/aisp
+- url: /open-banking/v4.0
 tags:
 - name: Event Notification
 paths:
@@ -47,40 +45,7 @@ paths:
             RateLimit:
               $ref: '#/components/headers/RateLimit'
 components:
-  parameters:
-    x-client-id:
-      in: header
-      name: x-client-id
-      required: false
-      description: "Only used if a TPP requires the client ID in order to return rate limit headers. \n\nThis header __must not__ be used for client authentication\n"
-      schema:
-        type: string
-    x-fapi-interaction-id-Param:
-      in: header
-      name: x-fapi-interaction-id
-      required: false
-      description: An RFC4122 UID used as a correlation id.
-      schema:
-        type: string
   headers:
-    RateLimit:
-      required: false
-      description: 'A server uses the "RateLimit" response header field to communicate the current service limit for a quota policy for a particular partition key.
-
-
-        Example:
-
-        `RateLimit: "default";r=50;t=30`
-
-
-        The **REQUIRED** "r" parameter value conveys the remaining quota units for the identified policy.
-
-
-        The **OPTIONAL** "t" parameter value conveys the time window reset time for the identified policy.
-
-        '
-      schema:
-        type: string
     RateLimit-Policy:
       required: false
       description: 'A non-empty list of Quota Policy Items. The Item value __MUST__ be a String.
@@ -99,6 +64,39 @@ components:
         '
       schema:
         type: string
+    RateLimit:
+      required: false
+      description: 'A server uses the "RateLimit" response header field to communicate the current service limit for a quota policy for a particular partition key.
+
+
+        Example:
+
+        `RateLimit: "default";r=50;t=30`
+
+
+        The **REQUIRED** "r" parameter value conveys the remaining quota units for the identified policy.
+
+
+        The **OPTIONAL** "t" parameter value conveys the time window reset time for the identified policy.
+
+        '
+      schema:
+        type: string
+  parameters:
+    x-client-id:
+      in: header
+      name: x-client-id
+      required: false
+      description: "Only used if a TPP requires the client ID in order to return rate limit headers. \n\nThis header __must not__ be used for client authentication\n"
+      schema:
+        type: string
+    x-fapi-interaction-id-Param:
+      in: header
+      name: x-fapi-interaction-id
+      required: false
+      description: An RFC4122 UID used as a correlation id.
+      schema:
+        type: string
   securitySchemes:
     TPPOAuth2Security:
       type: oauth2
@@ -108,12 +106,5 @@ components:
           tokenUrl: https://authserver.example/token
           scopes:
             accounts: Ability to read Accounts information
-    PSUOAuth2Security:
-      type: oauth2
-      description: OAuth flow, it is required when the PSU needs to perform SCA with the ASPSP when a TPP wants to access an ASPSP resource owned by the PSU
-      flows:
-        authorizationCode:
-          authorizationUrl: https://authserver.example/authorization
-          tokenUrl: https://authserver.example/token
-          scopes:
-            accounts: Ability to read Accounts information
+            fundsconfirmations: Ability to confirm funds
+            payments: Generic payment scope
