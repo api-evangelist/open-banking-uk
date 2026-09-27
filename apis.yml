@@ -1,17 +1,21 @@
 name: UK Open Banking
 description: UK Open Banking standard with REST APIs for account and transaction data, payment initiation, variable recurring payments, and confirmation of funds for regulated financial services. Governed by the Open Banking Implementation Entity (OBIE) and overseen by the FCA and PSR under PSD2 and the CMA Order.
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - openbankinguk/opendata-api-spec-compiled
+    - openbankinguk/read-write-api-specs
   open_source: unknown
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - openapi
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -35,7 +39,7 @@ specificationVersion: '0.23'
 
 tags:
   - Open Banking
-  - Financial-Services
+  - Financial Services
   - Payments
   - Account Information
   - PSD2
@@ -53,6 +57,7 @@ tags_raw:
   - Banking
   - Fintech
   - Regulated
+  - Financial-Services
 
 apis:
 - name: UK Open Banking Open Data API
@@ -1011,6 +1016,8 @@ apis:
   humanURL: https://openbankinguk.github.io/read-write-api-site3/v4.0.1/
   baseURL: https://{aspsp-host}/open-banking/v4.0
   tags:
+  - Small Business
+  tags_raw:
   - SME
   properties:
   - type: OpenAPI
