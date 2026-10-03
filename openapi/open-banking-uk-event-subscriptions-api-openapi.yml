@@ -199,49 +199,244 @@ paths:
         - payments
         - fundsconfirmations
 components:
+  responses:
+    201EventSubscriptionsCreated:
+      description: Event Subscription Created
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+        x-jws-signature:
+          description: 'Header containing a detached JWS signature of the body of the payload.
+
+            '
+          schema:
+            type: string
+        RateLimit-Policy:
+          $ref: '#/components/headers/RateLimit-Policy'
+        RateLimit:
+          $ref: '#/components/headers/RateLimit'
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: '#/components/schemas/OBEventSubscriptionResponse1'
+        application/jose+jwe:
+          schema:
+            $ref: '#/components/schemas/OBEventSubscriptionResponse1'
+    401Error:
+      description: Unauthorized
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+    200EventSubscriptionsRead:
+      description: Event Subscription Read
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+        x-jws-signature:
+          description: 'Header containing a detached JWS signature of the body of the payload.
+
+            '
+          schema:
+            type: string
+        RateLimit-Policy:
+          $ref: '#/components/headers/RateLimit-Policy'
+        RateLimit:
+          $ref: '#/components/headers/RateLimit'
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: '#/components/schemas/OBEventSubscriptionsResponse1'
+        application/jose+jwe:
+          schema:
+            $ref: '#/components/schemas/OBEventSubscriptionsResponse1'
+    429Error:
+      description: Too Many Requests
+      headers:
+        Retry-After:
+          description: Number in seconds to wait
+          schema:
+            type: integer
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+    500Error:
+      description: Internal Server Error
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: '#/components/schemas/OBErrorResponse1'
+        application/jose+jwe:
+          schema:
+            $ref: '#/components/schemas/OBErrorResponse1'
+    204EventSubscriptionsEventSubscriptionIdDeleted:
+      description: Event Subscription Deleted
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+        RateLimit-Policy:
+          $ref: '#/components/headers/RateLimit-Policy'
+        RateLimit:
+          $ref: '#/components/headers/RateLimit'
+    405Error:
+      description: Method Not Allowed
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+    400Error:
+      description: Bad request
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: '#/components/schemas/OBErrorResponse1'
+        application/jose+jwe:
+          schema:
+            $ref: '#/components/schemas/OBErrorResponse1'
+    406Error:
+      description: Not Acceptable
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+    404Error:
+      description: Not found
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+    200EventSubscriptionsEventSubscriptionIdChanged:
+      description: Event Subscription Changed
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+        x-jws-signature:
+          description: 'Header containing a detached JWS signature of the body of the payload.
+
+            '
+          schema:
+            type: string
+        RateLimit-Policy:
+          $ref: '#/components/headers/RateLimit-Policy'
+        RateLimit:
+          $ref: '#/components/headers/RateLimit'
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: '#/components/schemas/OBEventSubscriptionResponse1'
+        application/jose+jwe:
+          schema:
+            $ref: '#/components/schemas/OBEventSubscriptionResponse1'
+    409Error:
+      description: Conflict
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+    403Error:
+      description: Forbidden
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: '#/components/schemas/OBErrorResponse1'
+        application/jose+jwe:
+          schema:
+            $ref: '#/components/schemas/OBErrorResponse1'
+    415Error:
+      description: Unsupported Media Type
+      headers:
+        x-fapi-interaction-id:
+          description: An RFC4122 UID used as a correlation id.
+          schema:
+            type: string
+  parameters:
+    x-fapi-interaction-id:
+      in: header
+      name: x-fapi-interaction-id
+      required: false
+      description: An RFC4122 UID used as a correlation id.
+      schema:
+        type: string
+    x-client-id:
+      in: header
+      name: x-client-id
+      required: false
+      description: "Only used if an ASPSP requires the client ID in order to return rate limit headers. \n\nTPPs __must__ refer to ASPSP developer portals for further information on any rate limit policies, if the headers are supported and any additional requirements.\n\nThis header __must not__ be used for client authentication\n"
+      schema:
+        type: string
+    Authorization:
+      in: header
+      name: Authorization
+      required: true
+      description: An Authorisation Token as per https://tools.ietf.org/html/rfc6750
+      schema:
+        type: string
+    x-fapi-customer-ip-address:
+      in: header
+      name: x-fapi-customer-ip-address
+      required: false
+      description: The PSU's IP address if the PSU is currently logged in with the TPP.
+      schema:
+        type: string
+    x-fapi-auth-date:
+      in: header
+      name: x-fapi-auth-date
+      required: false
+      description: "The time when the PSU last logged in with the TPP. \nAll dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: \nSun, 10 Sep 2017 19:43:31 UTC"
+      schema:
+        type: string
+        pattern: ^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4} \d{2}:\d{2}:\d{2} (GMT|UTC)$
+    EventSubscriptionId:
+      name: EventSubscriptionId
+      in: path
+      description: EventSubscriptionId
+      required: true
+      schema:
+        type: string
+    x-jws-signature:
+      in: header
+      name: x-jws-signature
+      required: true
+      description: A detached JWS signature of the body of the payload.
+      schema:
+        type: string
+    x-customer-user-agent:
+      in: header
+      name: x-customer-user-agent
+      description: Indicates the user-agent that the PSU is using.
+      required: false
+      schema:
+        type: string
   schemas:
-    ISODateTime:
-      description: "All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00"
-      type: string
-      format: date-time
-    OBExternalStatusReason1Code:
-      description: Low level textual error code, for all enum values see `OBExternalStatusReason1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets/)
-      type: string
-      minLength: 4
-      maxLength: 4
-      example: U001
-    OBEventSubscriptionResponse1:
-      type: object
-      required:
-      - Data
-      properties:
-        Data:
-          type: object
-          required:
-          - EventSubscriptionId
-          - Version
-          properties:
-            EventSubscriptionId:
-              description: Unique identification as assigned by the ASPSP to uniquely identify the callback URL resource.
-              type: string
-              minLength: 1
-              maxLength: 40
-            CallbackUrl:
-              description: Callback URL for a TPP hosted service. Will be used by ASPSPs, in conjunction with the resource name, to construct a URL to send event notifications to.
-              type: string
-              format: uri
-            Version:
-              $ref: '#/components/schemas/Version'
-            EventTypes:
-              type: array
-              items:
-                description: Array of event types the subscription applies to.
-                type: string
-        Links:
-          $ref: '#/components/schemas/Links'
-        Meta:
-          $ref: '#/components/schemas/Meta'
-      additionalProperties: false
     OBEventSubscriptionsResponse1:
       type: object
       required:
@@ -279,46 +474,6 @@ components:
         Meta:
           $ref: '#/components/schemas/Meta'
       additionalProperties: false
-    OBEventSubscription1:
-      type: object
-      required:
-      - Data
-      properties:
-        Data:
-          type: object
-          required:
-          - Version
-          properties:
-            CallbackUrl:
-              description: Callback URL for a TPP hosted service. Will be used by ASPSPs, in conjunction with the resource name, to construct a URL to send event notifications to.
-              type: string
-              format: uri
-            Version:
-              $ref: '#/components/schemas/Version'
-            EventTypes:
-              type: array
-              items:
-                description: Array of event types the subscription applies to.
-                type: string
-      additionalProperties: false
-    Meta:
-      title: MetaData
-      type: object
-      description: Meta Data relevant to the payload
-      properties:
-        TotalPages:
-          type: integer
-          format: int32
-        FirstAvailableDateTime:
-          $ref: '#/components/schemas/ISODateTime'
-        LastAvailableDateTime:
-          $ref: '#/components/schemas/ISODateTime'
-      additionalProperties: false
-    Version:
-      description: Version for the event notification.
-      type: string
-      minLength: 1
-      maxLength: 10
     OBErrorResponse1:
       description: An array of detail error codes, and messages, and URLs to documentation to help remediation.
       type: object
@@ -348,6 +503,12 @@ components:
       required:
       - Errors
       additionalProperties: false
+    OBExternalStatusReason1Code:
+      description: Low level textual error code, for all enum values see `OBExternalStatusReason1Code` in *OB_Internal_CodeSet* [here](https://github.com/OpenBankingUK/External_Internal_CodeSets/)
+      type: string
+      minLength: 4
+      maxLength: 4
+      example: U001
     Links:
       type: object
       description: Links relevant to the payload
@@ -370,6 +531,38 @@ components:
       additionalProperties: false
       required:
       - Self
+    OBEventSubscriptionResponse1:
+      type: object
+      required:
+      - Data
+      properties:
+        Data:
+          type: object
+          required:
+          - EventSubscriptionId
+          - Version
+          properties:
+            EventSubscriptionId:
+              description: Unique identification as assigned by the ASPSP to uniquely identify the callback URL resource.
+              type: string
+              minLength: 1
+              maxLength: 40
+            CallbackUrl:
+              description: Callback URL for a TPP hosted service. Will be used by ASPSPs, in conjunction with the resource name, to construct a URL to send event notifications to.
+              type: string
+              format: uri
+            Version:
+              $ref: '#/components/schemas/Version'
+            EventTypes:
+              type: array
+              items:
+                description: Array of event types the subscription applies to.
+                type: string
+        Links:
+          $ref: '#/components/schemas/Links'
+        Meta:
+          $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     OBError1:
       type: object
       properties:
@@ -394,64 +587,50 @@ components:
       - ErrorCode
       additionalProperties: false
       minProperties: 1
-  parameters:
-    x-client-id:
-      in: header
-      name: x-client-id
-      required: false
-      description: "Only used if an ASPSP requires the client ID in order to return rate limit headers. \n\nTPPs __must__ refer to ASPSP developer portals for further information on any rate limit policies, if the headers are supported and any additional requirements.\n\nThis header __must not__ be used for client authentication\n"
-      schema:
-        type: string
-    x-fapi-auth-date:
-      in: header
-      name: x-fapi-auth-date
-      required: false
-      description: "The time when the PSU last logged in with the TPP. \nAll dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: \nSun, 10 Sep 2017 19:43:31 UTC"
-      schema:
-        type: string
-        pattern: ^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4} \d{2}:\d{2}:\d{2} (GMT|UTC)$
-    x-fapi-interaction-id:
-      in: header
-      name: x-fapi-interaction-id
-      required: false
-      description: An RFC4122 UID used as a correlation id.
-      schema:
-        type: string
-    x-jws-signature:
-      in: header
-      name: x-jws-signature
-      required: true
-      description: A detached JWS signature of the body of the payload.
-      schema:
-        type: string
-    x-customer-user-agent:
-      in: header
-      name: x-customer-user-agent
-      description: Indicates the user-agent that the PSU is using.
-      required: false
-      schema:
-        type: string
-    Authorization:
-      in: header
-      name: Authorization
-      required: true
-      description: An Authorisation Token as per https://tools.ietf.org/html/rfc6750
-      schema:
-        type: string
-    x-fapi-customer-ip-address:
-      in: header
-      name: x-fapi-customer-ip-address
-      required: false
-      description: The PSU's IP address if the PSU is currently logged in with the TPP.
-      schema:
-        type: string
-    EventSubscriptionId:
-      name: EventSubscriptionId
-      in: path
-      description: EventSubscriptionId
-      required: true
-      schema:
-        type: string
+    Meta:
+      title: MetaData
+      type: object
+      description: Meta Data relevant to the payload
+      properties:
+        TotalPages:
+          type: integer
+          format: int32
+        FirstAvailableDateTime:
+          $ref: '#/components/schemas/ISODateTime'
+        LastAvailableDateTime:
+          $ref: '#/components/schemas/ISODateTime'
+      additionalProperties: false
+    OBEventSubscription1:
+      type: object
+      required:
+      - Data
+      properties:
+        Data:
+          type: object
+          required:
+          - Version
+          properties:
+            CallbackUrl:
+              description: Callback URL for a TPP hosted service. Will be used by ASPSPs, in conjunction with the resource name, to construct a URL to send event notifications to.
+              type: string
+              format: uri
+            Version:
+              $ref: '#/components/schemas/Version'
+            EventTypes:
+              type: array
+              items:
+                description: Array of event types the subscription applies to.
+                type: string
+      additionalProperties: false
+    Version:
+      description: Version for the event notification.
+      type: string
+      minLength: 1
+      maxLength: 10
+    ISODateTime:
+      description: "All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00"
+      type: string
+      format: date-time
   headers:
     RateLimit-Policy:
       required: false
@@ -495,185 +674,6 @@ components:
         '
       schema:
         type: string
-  responses:
-    400Error:
-      description: Bad request
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-      content:
-        application/json; charset=utf-8:
-          schema:
-            $ref: '#/components/schemas/OBErrorResponse1'
-        application/jose+jwe:
-          schema:
-            $ref: '#/components/schemas/OBErrorResponse1'
-    409Error:
-      description: Conflict
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-    429Error:
-      description: Too Many Requests
-      headers:
-        Retry-After:
-          description: Number in seconds to wait
-          schema:
-            type: integer
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-    406Error:
-      description: Not Acceptable
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-    404Error:
-      description: Not found
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-    201EventSubscriptionsCreated:
-      description: Event Subscription Created
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-        x-jws-signature:
-          description: 'Header containing a detached JWS signature of the body of the payload.
-
-            '
-          schema:
-            type: string
-        RateLimit-Policy:
-          $ref: '#/components/headers/RateLimit-Policy'
-        RateLimit:
-          $ref: '#/components/headers/RateLimit'
-      content:
-        application/json; charset=utf-8:
-          schema:
-            $ref: '#/components/schemas/OBEventSubscriptionResponse1'
-        application/jose+jwe:
-          schema:
-            $ref: '#/components/schemas/OBEventSubscriptionResponse1'
-    204EventSubscriptionsEventSubscriptionIdDeleted:
-      description: Event Subscription Deleted
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-        RateLimit-Policy:
-          $ref: '#/components/headers/RateLimit-Policy'
-        RateLimit:
-          $ref: '#/components/headers/RateLimit'
-    200EventSubscriptionsEventSubscriptionIdChanged:
-      description: Event Subscription Changed
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-        x-jws-signature:
-          description: 'Header containing a detached JWS signature of the body of the payload.
-
-            '
-          schema:
-            type: string
-        RateLimit-Policy:
-          $ref: '#/components/headers/RateLimit-Policy'
-        RateLimit:
-          $ref: '#/components/headers/RateLimit'
-      content:
-        application/json; charset=utf-8:
-          schema:
-            $ref: '#/components/schemas/OBEventSubscriptionResponse1'
-        application/jose+jwe:
-          schema:
-            $ref: '#/components/schemas/OBEventSubscriptionResponse1'
-    401Error:
-      description: Unauthorized
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-    415Error:
-      description: Unsupported Media Type
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-    405Error:
-      description: Method Not Allowed
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-    200EventSubscriptionsRead:
-      description: Event Subscription Read
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-        x-jws-signature:
-          description: 'Header containing a detached JWS signature of the body of the payload.
-
-            '
-          schema:
-            type: string
-        RateLimit-Policy:
-          $ref: '#/components/headers/RateLimit-Policy'
-        RateLimit:
-          $ref: '#/components/headers/RateLimit'
-      content:
-        application/json; charset=utf-8:
-          schema:
-            $ref: '#/components/schemas/OBEventSubscriptionsResponse1'
-        application/jose+jwe:
-          schema:
-            $ref: '#/components/schemas/OBEventSubscriptionsResponse1'
-    403Error:
-      description: Forbidden
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-      content:
-        application/json; charset=utf-8:
-          schema:
-            $ref: '#/components/schemas/OBErrorResponse1'
-        application/jose+jwe:
-          schema:
-            $ref: '#/components/schemas/OBErrorResponse1'
-    500Error:
-      description: Internal Server Error
-      headers:
-        x-fapi-interaction-id:
-          description: An RFC4122 UID used as a correlation id.
-          schema:
-            type: string
-      content:
-        application/json; charset=utf-8:
-          schema:
-            $ref: '#/components/schemas/OBErrorResponse1'
-        application/jose+jwe:
-          schema:
-            $ref: '#/components/schemas/OBErrorResponse1'
   securitySchemes:
     TPPOAuth2Security:
       type: oauth2
