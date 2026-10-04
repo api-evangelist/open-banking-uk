@@ -83,18 +83,18 @@ components:
       schema:
         type: string
   parameters:
-    x-fapi-interaction-id-Param:
-      in: header
-      name: x-fapi-interaction-id
-      required: false
-      description: An RFC4122 UID used as a correlation id.
-      schema:
-        type: string
     x-client-id:
       in: header
       name: x-client-id
       required: false
       description: "Only used if a TPP requires the client ID in order to return rate limit headers. \n\nThis header __must not__ be used for client authentication\n"
+      schema:
+        type: string
+    x-fapi-interaction-id-Param:
+      in: header
+      name: x-fapi-interaction-id
+      required: false
+      description: An RFC4122 UID used as a correlation id.
       schema:
         type: string
   securitySchemes:
