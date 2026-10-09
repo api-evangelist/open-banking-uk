@@ -1,3 +1,8 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (dated 2026-06-13 by the file itself), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
+generated: '2026-06-13'
 name: UK Open Banking API Rate Limits and Performance Requirements
 description: Performance and availability requirements for UK Open Banking APIs as defined in the Open Banking Operational Guidelines. These are minimum standards that all ASPSPs (Account Servicing Payment Service Providers) must meet under the UK Open Banking Standard and PSD2 Regulatory Technical Standards. Rate limits in the traditional requests-per-minute sense are not specified by the standard; instead, requirements focus on response time, availability, and error rate KPIs.
 url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/rate-limits/rate-limits.yml

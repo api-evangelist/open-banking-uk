@@ -1,3 +1,8 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (dated 2026-06-13 by the file itself), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
+generated: '2026-06-13'
 name: UK Open Banking API Plans
 description: Access model for the UK Open Banking APIs. The core Read/Write, Open Data, and Dynamic Client Registration APIs are mandated under the UK Open Banking Standard and PSD2 Regulatory Technical Standards (RTS). Regulated ASPSPs must provide these APIs at no charge to licensed TPPs. Premium APIs (such as commercial VRP beyond sweeping mandates) may carry fees governed by JROC commercial pricing principles.
 url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/plans/plans.yml
@@ -59,3 +64,27 @@ notes:
   - The five JROC commercial pricing principles require that fees broadly reflect long-run costs, incentivise investment and innovation, incentivise take-up of open banking, treat TPPs fairly, and be transparent.
   - Mandatory API access under the CMA Order is free at point of use; ASPSPs bear the cost of providing the infrastructure.
   - API availability and performance SLAs are set by the Open Banking Standards operational guidelines (99.5%+ availability, 750ms TTLB targets).
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Regulated (Mandatory) Access
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Premium / Commercial API Access
+    access: paid
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Sandbox / Testing Access
+    access: free
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []

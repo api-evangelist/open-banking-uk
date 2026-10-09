@@ -1,3 +1,12 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (dated 2026-06-13 by the file itself), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+# Coverage demoted 2026-10-07 (roadmap#942, PLAN.md Stage A): this file was written by an API Evangelist
+# sweep and names no billing unit, meters or pricing category read from the provider — it restates the
+# FinOps framework. It is `x-coverage: unmeasured`, and the FOCUS alignment it claimed has been removed.
+x-coverage: unmeasured
+method: generated
+generated: '2026-06-13'
 name: UK Open Banking API FinOps
 description: Financial operations considerations for consuming UK Open Banking APIs. Because the mandated Open Banking APIs are provided free of charge to licensed TPPs under PSD2 and the CMA Order, the primary cost drivers are on the consumer side — infrastructure, compliance, licensing, and third-party aggregation services — rather than API call fees. This document covers cost considerations for organisations building on UK Open Banking.
 url: https://raw.githubusercontent.com/api-evangelist/open-banking-uk/refs/heads/main/finops/finops.yml
