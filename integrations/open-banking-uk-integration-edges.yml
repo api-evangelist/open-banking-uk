@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/open-banking-uk/integrations
+- https://zapier.com/apps/uk-open-banking/integrations
+- https://n8n.io/integrations/open-banking-uk/
+- https://composio.dev/toolkits/open-banking-uk
+- https://monid.ai/tools/open-banking-uk
+checked:
+- https://composio.dev/toolkits/open-banking-uk
+- https://monid.ai/tools/open-banking-uk
+- https://n8n.io/integrations/open-banking-uk/
+- https://zapier.com/apps/open-banking-uk/integrations
+- https://zapier.com/apps/uk-open-banking/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
