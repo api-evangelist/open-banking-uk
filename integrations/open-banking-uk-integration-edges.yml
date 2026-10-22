@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/open-banking-uk/integrations
 - https://zapier.com/apps/uk-open-banking/integrations
@@ -12,7 +12,78 @@ checked:
 - https://n8n.io/integrations/open-banking-uk/
 - https://zapier.com/apps/open-banking-uk/integrations
 - https://zapier.com/apps/uk-open-banking/integrations
+- https://api.apis.guru/v2/list.json
+- https://api.apis.guru/v2/providers.json
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: APIs.guru OpenAPI Directory
+  partner: apis-guru
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: third-party
+  evidence: https://apis.guru/
+  category: API definition directory listing (OpenAPI)
+  contract_reference:
+    register: APIs.guru OpenAPI Directory
+    spec_file: null
+    standard: APIs.guru OpenAPI Directory
+    role: listed-in-directory
+    directory_provider: openbanking.org.uk
+    matched_domain: openbanking.org.uk
+    matched_by: domain
+    apis_listed: 5
+    version_count: 5
+    first_added: '2017-08-01'
+    last_updated: '2021-03-07'
+    origin_publisher_hosted: false
+    origin_hosts:
+    - raw.githubusercontent.com
+    categories:
+    - financial
+    own_openapi_files: 39
+    listings:
+    - key: openbanking.org.uk
+      title: Open Data API
+      preferred: v1.3
+      versions: 1
+      swagger_url: https://api.apis.guru/v2/specs/openbanking.org.uk/v1.3/openapi.json
+      origin_url: https://raw.githubusercontent.com/OpenBankingUK/opendata-api-spec-compiled/master/opendata-swagger.json
+      openapi_version: 3.0.0
+    - key: openbanking.org.uk:account-info-openapi
+      title: Account and Transaction API Specification
+      preferred: 3.1.7
+      versions: 1
+      swagger_url: https://api.apis.guru/v2/specs/openbanking.org.uk/account-info-openapi/3.1.7/openapi.json
+      origin_url: https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/account-info-openapi.yaml
+      openapi_version: 3.0.0
+    - key: openbanking.org.uk:confirmation-funds-openapi
+      title: Confirmation of Funds API Specification
+      preferred: 3.1.7
+      versions: 1
+      swagger_url: https://api.apis.guru/v2/specs/openbanking.org.uk/confirmation-funds-openapi/3.1.7/openapi.json
+      origin_url: https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/confirmation-funds-openapi.yaml
+      openapi_version: 3.0.0
+    - key: openbanking.org.uk:event-notifications-openapi
+      title: Event Notification API Specification - TPP Endpoints
+      preferred: 3.1.7
+      versions: 1
+      swagger_url: https://api.apis.guru/v2/specs/openbanking.org.uk/event-notifications-openapi/3.1.7/openapi.json
+      origin_url: https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/event-notifications-openapi.yaml
+      openapi_version: 3.0.0
+    - key: openbanking.org.uk:payment-initiation-openapi
+      title: Payment Initiation API
+      preferred: 3.1.7
+      versions: 1
+      swagger_url: https://api.apis.guru/v2/specs/openbanking.org.uk/payment-initiation-openapi/3.1.7/openapi.json
+      origin_url: https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/payment-initiation-openapi.yaml
+      openapi_version: 3.0.0
+    signal_note: 'participation only: a community directory listing (APIs.guru collects definitions; the provider
+      did not file them). Signals: version_count, apis_listed, origin_publisher_hosted.'
+    detected_by: sweep-openapi-directory-apis-guru.py
+    detected: '2026-10-22'
+  detected_by: sweep-openapi-directory-apis-guru.py
+  first_seen: '2026-10-22'
 templates: []
