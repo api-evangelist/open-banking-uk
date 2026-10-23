@@ -599,3 +599,9 @@ components:
           tokenUrl: https://authserver.example/token
           scopes:
             accounts: Ability to read Accounts information
+x-provenance:
+  method: harvested
+  publisher: UK Open Banking
+  source: https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/account-info-openapi.yaml
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
