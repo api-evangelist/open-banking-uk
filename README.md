@@ -66,53 +66,224 @@
 
 UK Open Banking standard with REST APIs for account and transaction data, payment initiation, variable recurring payments, and confirmation of funds for regulated financial services. Governed by the Open Banking Implementation Entity (OBIE) and overseen by the FCA and PSR under PSD2 and the CMA Order.
 
-## APIs
+**Areas:** Open Banking · Financial Services · Payments · Account Information · PSD2 · United Kingdom · Banking · Fintech · Regulated
 
-### Read/Write API v4.0.1
-The core Open Banking API enabling TPPs to access customer account information and initiate payments with consent. Covers four service roles:
+## UK Open Banking on APIs.io
 
-- **AISP (Account Information Service Provider)** — Account access consents, accounts, balances, transactions, beneficiaries, direct debits, standing orders, products, offers, parties, scheduled payments, and statements
-- **PISP (Payment Initiation Service Provider)** — Domestic and international immediate payments, scheduled payments, and standing orders
-- **CBPII (Card-Based Payment Instrument Issuer)** — Confirmation of funds (CoF) to verify available balances before payment
-- **VRP (Variable Recurring Payments)** — Domestic VRP consents and payment orders for flexible, customer-controlled recurring payments
+Everything profiled for UK Open Banking is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/open-banking-uk/](https://apis.io/providers/open-banking-uk/)** — or go straight to one of the APIs or properties below.
 
-Documentation: https://openbankinguk.github.io/read-write-api-site3/v4.0.1/
+### APIs (42)
 
-### Open Data API v2.4.0
-Public APIs requiring no customer authentication for accessing standardized bank product and location data:
-- ATM locations
-- Branch locations
-- Personal current account products
-- Business current account products
-- SME commercial credit cards
-- SME loans
+- [UK Open Banking Open Data API](https://apis.io/apis/open-banking-uk/uk-open-banking-open-data-api/) — Public-facing APIs enabling third-party developers to access standardized open data published by Account Servicing Payment Service Providers, including ATM…
+- [UK Open Banking Dynamic Client Registration API](https://apis.io/apis/open-banking-uk/uk-open-banking-dynamic-client-registration-api/) — Allows TPPs to dynamically register as OAuth clients with ASPSPs by submitting Software Statement Assertions issued by the Open Banking Directory. Supports…
+- [UK Open Banking Directory API](https://apis.io/apis/open-banking-uk/uk-open-banking-directory-api/) — Technical API describing the Open Banking Directory, including participant registration, Software Statement management, and service discovery for TPPs and…
+- [UK Open Banking Account Access Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-account-access-consents-api/) — The Account Access Consents API from UK Open Banking — 2 operation(s) for account access consents.
+- [UK Open Banking Accounts API](https://apis.io/apis/open-banking-uk/open-banking-uk-accounts-api/) — The Accounts API from UK Open Banking — 2 operation(s) for accounts.
+- [UK Open Banking ATM API](https://apis.io/apis/open-banking-uk/open-banking-uk-atm-api/) — Endpoint for getting ATM data
+- [UK Open Banking Balances API](https://apis.io/apis/open-banking-uk/open-banking-uk-balances-api/) — The Balances API from UK Open Banking — 2 operation(s) for balances.
+- [UK Open Banking BCA API](https://apis.io/apis/open-banking-uk/open-banking-uk-bca-api/) — Endpoint for getting Business Current Account data
+- [UK Open Banking Beneficiaries API](https://apis.io/apis/open-banking-uk/open-banking-uk-beneficiaries-api/) — The Beneficiaries API from UK Open Banking — 2 operation(s) for beneficiaries.
+- [UK Open Banking Branch API](https://apis.io/apis/open-banking-uk/open-banking-uk-branch-api/) — Endpoint for getting Branch data
+- [UK Open Banking CCC API](https://apis.io/apis/open-banking-uk/open-banking-uk-ccc-api/) — Endpoint for getting Commercial Credit Card data
+- [UK Open Banking Direct Debits API](https://apis.io/apis/open-banking-uk/open-banking-uk-direct-debits-api/) — The Direct Debits API from UK Open Banking — 2 operation(s) for direct debits.
+- [UK Open Banking Domestic Payment Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-domestic-payment-consents-api/) — The Domestic Payment Consents API from UK Open Banking — 3 operation(s) for domestic payment consents.
+- [UK Open Banking Domestic Payments API](https://apis.io/apis/open-banking-uk/open-banking-uk-domestic-payments-api/) — The Domestic Payments API from UK Open Banking — 3 operation(s) for domestic payments.
+- [UK Open Banking Domestic Scheduled Payment Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-domestic-scheduled-payment-consents-api/) — The Domestic Scheduled Payment Consents API from UK Open Banking — 2 operation(s) for domestic scheduled payment consents.
+- [UK Open Banking Domestic Scheduled Payments API](https://apis.io/apis/open-banking-uk/open-banking-uk-domestic-scheduled-payments-api/) — The Domestic Scheduled Payments API from UK Open Banking — 3 operation(s) for domestic scheduled payments.
+- [UK Open Banking Domestic Standing Order Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-domestic-standing-order-consents-api/) — The Domestic Standing Order Consents API from UK Open Banking — 2 operation(s) for domestic standing order consents.
+- [UK Open Banking Domestic Standing Orders API](https://apis.io/apis/open-banking-uk/open-banking-uk-domestic-standing-orders-api/) — The Domestic Standing Orders API from UK Open Banking — 3 operation(s) for domestic standing orders.
+- [UK Open Banking Domestic VRP Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-domestic-vrp-consents-api/) — The Domestic VRP Consents API from UK Open Banking — 3 operation(s) for domestic vrp consents.
+- [UK Open Banking Domestic VRPs API](https://apis.io/apis/open-banking-uk/open-banking-uk-domestic-vrps-api/) — The Domestic VRPs API from UK Open Banking — 3 operation(s) for domestic vrps.
+- [UK Open Banking Event Notification API](https://apis.io/apis/open-banking-uk/open-banking-uk-event-notification-api/) — The Event Notification API from UK Open Banking — 1 operation(s) for event notification.
+- [UK Open Banking Event Subscriptions API](https://apis.io/apis/open-banking-uk/open-banking-uk-event-subscriptions-api/) — The Event Subscriptions API from UK Open Banking — 2 operation(s) for event subscriptions.
+- [UK Open Banking Events API](https://apis.io/apis/open-banking-uk/open-banking-uk-events-api/) — The Events API from UK Open Banking — 1 operation(s) for events.
+- [UK Open Banking File Payment Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-file-payment-consents-api/) — The File Payment Consents API from UK Open Banking — 3 operation(s) for file payment consents.
+- [UK Open Banking File Payments API](https://apis.io/apis/open-banking-uk/open-banking-uk-file-payments-api/) — The File Payments API from UK Open Banking — 4 operation(s) for file payments.
+- [UK Open Banking Funds Confirmation Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-funds-confirmation-consents-api/) — The Funds Confirmation Consents API from UK Open Banking — 2 operation(s) for funds confirmation consents.
+- [UK Open Banking Funds Confirmations API](https://apis.io/apis/open-banking-uk/open-banking-uk-funds-confirmations-api/) — The Funds Confirmations API from UK Open Banking — 1 operation(s) for funds confirmations.
+- [UK Open Banking International Payment Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-international-payment-consents-api/) — The International Payment Consents API from UK Open Banking — 3 operation(s) for international payment consents.
+- [UK Open Banking International Payments API](https://apis.io/apis/open-banking-uk/open-banking-uk-international-payments-api/) — The International Payments API from UK Open Banking — 3 operation(s) for international payments.
+- [UK Open Banking International Scheduled Payments API](https://apis.io/apis/open-banking-uk/open-banking-uk-international-scheduled-payments-api/) — The International Scheduled Payments API from UK Open Banking — 3 operation(s) for international scheduled payments.
+- [UK Open Banking International Scheduled Payments Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-international-scheduled-payments-consents-api/) — The International Scheduled Payments Consents API from UK Open Banking — 3 operation(s) for international scheduled payments consents.
+- [UK Open Banking International Standing Orders API](https://apis.io/apis/open-banking-uk/open-banking-uk-international-standing-orders-api/) — The International Standing Orders API from UK Open Banking — 3 operation(s) for international standing orders.
+- [UK Open Banking International Standing Orders Consents API](https://apis.io/apis/open-banking-uk/open-banking-uk-international-standing-orders-consents-api/) — The International Standing Orders Consents API from UK Open Banking — 2 operation(s) for international standing orders consents.
+- [UK Open Banking Offers API](https://apis.io/apis/open-banking-uk/open-banking-uk-offers-api/) — The Offers API from UK Open Banking — 2 operation(s) for offers.
+- [UK Open Banking Parties API](https://apis.io/apis/open-banking-uk/open-banking-uk-parties-api/) — The Parties API from UK Open Banking — 3 operation(s) for parties.
+- [UK Open Banking PCA API](https://apis.io/apis/open-banking-uk/open-banking-uk-pca-api/) — Endpoint for getting Personal Current Account data
+- [UK Open Banking Products API](https://apis.io/apis/open-banking-uk/open-banking-uk-products-api/) — The Products API from UK Open Banking — 2 operation(s) for products.
+- [UK Open Banking Scheduled Payments API](https://apis.io/apis/open-banking-uk/open-banking-uk-scheduled-payments-api/) — The Scheduled Payments API from UK Open Banking — 2 operation(s) for scheduled payments.
+- [UK Open Banking SME API](https://apis.io/apis/open-banking-uk/open-banking-uk-sme-api/) — Endpoint for getting Unsecured SME Loan data
+- [UK Open Banking Standing Orders API](https://apis.io/apis/open-banking-uk/open-banking-uk-standing-orders-api/) — The Standing Orders API from UK Open Banking — 2 operation(s) for standing orders.
+- [UK Open Banking Statements API](https://apis.io/apis/open-banking-uk/open-banking-uk-statements-api/) — The Statements API from UK Open Banking — 5 operation(s) for statements.
+- [UK Open Banking Transactions API](https://apis.io/apis/open-banking-uk/open-banking-uk-transactions-api/) — The Transactions API from UK Open Banking — 2 operation(s) for transactions.
 
-Documentation: https://openbankinguk.github.io/opendata-api-docs-pub/
+### Published properties
 
-### Dynamic Client Registration API v3.3
-Enables TPPs to register dynamically as OAuth clients with ASPSPs by submitting Software Statement Assertions from the Open Banking Directory.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Directory API
-Manages participant registration, Software Statement management, and service discovery for the UK Open Banking ecosystem.
+#### Agentic access (1)
 
-## Access Model
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Core mandated APIs are available free of charge to FCA-authorised TPPs registered on the Open Banking Directory. Premium APIs (e.g., commercial VRP) are subject to bilateral commercial agreements governed by JROC pricing principles.
+- [Open Banking Uk Agentic Access](https://apis.io/agentic-access/open-banking-uk/open-banking-uk-agentic-access/)
 
-- Standards: https://standards.openbanking.org.uk/
-- Developer Zone: https://openbanking.atlassian.net/wiki/spaces/DZ/overview
-- GitHub: https://github.com/OpenBankingUK
-- API Performance: https://www.openbanking.org.uk/api-performance/
+#### JSON Schema (6)
 
-## Performance Standards
+The data models the API reads and writes.
 
-- Availability target: 99.5% monthly
-- Response time target: 750ms average TTLB (AISP, PISP, CoF)
-- Error rate target: 0.5% maximum daily error rate (5xx responses)
+- [Account and Transaction API Specification](https://apis.io/schemas/open-banking-uk/account-info/)
+- [Confirmation of Funds API Specification](https://apis.io/schemas/open-banking-uk/confirmation-funds/)
+- [Event Notification API Specification - TPP Endpoints](https://apis.io/schemas/open-banking-uk/event-notifications/)
+- [Events API Specification - ASPSP Endpoints](https://apis.io/schemas/open-banking-uk/events/)
+- [Payment Initiation API](https://apis.io/schemas/open-banking-uk/payment-initiation/)
+- [OBL VRP Profile](https://apis.io/schemas/open-banking-uk/vrp/)
 
-## Repository Structure
+#### JSON-LD (1)
 
-- `apis.yml` — APIs.json 0.19 provider profile
-- `plans/plans.yml` — API access plans and tiers
-- `rate-limits/rate-limits.yml` — Performance KPIs and rate limit guidance
-- `finops/finops.yml` — FinOps considerations for API consumers
+Linked-data contexts for the provider's vocabulary.
+
+- [Apis Context](https://apis.io/jsonld/open-banking-uk/apis/)
+
+#### Examples (6)
+
+Example requests and responses.
+
+- [Account Info Examples](https://apis.io/examples/open-banking-uk/account-info-examples/)
+- [Confirmation Funds Examples](https://apis.io/examples/open-banking-uk/confirmation-funds-examples/)
+- [Event Notifications Examples](https://apis.io/examples/open-banking-uk/event-notifications-examples/)
+- [Events Examples](https://apis.io/examples/open-banking-uk/events-examples/)
+- [Payment Initiation Examples](https://apis.io/examples/open-banking-uk/payment-initiation-examples/)
+- [Vrp Examples](https://apis.io/examples/open-banking-uk/vrp-examples/)
+
+#### Collections (39)
+
+Postman and Open Collection request collections.
+
+- [Account and Transaction API Specification Account Access Consents API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-account-access-consents-api/)
+- [Account and Transaction API Specification Account Access Consents Accounts API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-accounts-api/)
+- [Account and Transaction API Specification Account Access Consents ATM API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-atm-api/)
+- [Account and Transaction API Specification Account Access Consents Balances API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-balances-api/)
+- [Account and Transaction API Specification Account Access Consents BCA API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-bca-api/)
+- [Account and Transaction API Specification Account Access Consents Beneficiaries API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-beneficiaries-api/)
+- [Account and Transaction API Specification Account Access Consents Branch API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-branch-api/)
+- [Account and Transaction API Specification Account Access Consents CCC API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-ccc-api/)
+- [Account and Transaction API Specification Account Access Consents Direct Debits API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-direct-debits-api/)
+- [Account and Transaction API Specification Account Access Consents Domestic Payment Consents API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-domestic-payment-consents-api/)
+- [Account and Transaction API Specification Account Access Consents Domestic Payments API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-domestic-payments-api/)
+- [Account and Transaction API Specification Account Access Consents Domestic Scheduled Payment Consents API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-domestic-scheduled-payment-consents-api/)
+- [Account and Transaction API Specification Account Access Consents Domestic Scheduled Payments API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-domestic-scheduled-payments-api/)
+- [Account and Transaction API Specification Account Access Consents Domestic Standing Order Consents API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-domestic-standing-order-consents-api/)
+- [Account and Transaction API Specification Account Access Consents Domestic Standing Orders API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-domestic-standing-orders-api/)
+- [Account and Transaction API Specification Account Access Consents Domestic VRP Consents API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-domestic-vrp-consents-api/)
+- [Account and Transaction API Specification Account Access Consents Domestic VRPs API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-domestic-vrps-api/)
+- [Account and Transaction API Specification Account Access Consents Event Notification API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-event-notification-api/)
+- [Account and Transaction API Specification Account Access Consents Event Subscriptions API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-event-subscriptions-api/)
+- [Account and Transaction API Specification Account Access Consents Events API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-events-api/)
+- [Account and Transaction API Specification Account Access Consents File Payment Consents API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-file-payment-consents-api/)
+- [Account and Transaction API Specification Account Access Consents File Payments API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-file-payments-api/)
+- [Account and Transaction API Specification Account Access Consents Funds Confirmation Consents API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-funds-confirmation-consents-api/)
+- [Account and Transaction API Specification Account Access Consents Funds Confirmations API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-funds-confirmations-api/)
+- [Account and Transaction API Specification Account Access Consents International Payment Consents API](https://apis.io/collections/open-banking-uk/open-open-banking-uk-international-payment-consents-api/)
+- …and 14 more published on APIs.io
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [UK Open Banking — jsonschema rules](https://apis.io/rules/open-banking-uk/open-banking-uk-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Open Banking Uk Authentication](https://apis.io/security/open-banking-uk/open-banking-uk-authentication/)
+- [Open Banking Uk Domain Security](https://apis.io/security/open-banking-uk/open-banking-uk-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Open Banking Uk Scopes](https://apis.io/scopes/open-banking-uk/open-banking-uk-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plans](https://apis.io/plans/open-banking-uk/plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/open-banking-uk/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/open-banking-uk/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.openbanking.org.uk/)
+- [Blog](https://www.openbanking.org.uk/news/blog/)
+- [Terms of service](https://www.openbanking.org.uk/terms/)
+- [Privacy policy](https://www.openbanking.org.uk/privacy-policy/)
+- [GitHub](https://github.com/OpenBankingUK)
+
+## API Evangelist rating
+
+**Kin Score 34.1** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 72.3 |
+| Contract quality | 51.4 |
+| Contract governance | 9.8 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 18.4 |
+
+**Agent readiness 34.0** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | verified |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | verified |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 33.1** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/open-banking-uk/](https://apis.io/providers/open-banking-uk/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for UK Open Banking: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/open-banking-uk/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
